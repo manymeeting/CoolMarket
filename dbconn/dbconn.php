@@ -27,7 +27,8 @@ class DbConn
         $this->db_name = $db_name; // Database name
         $this->tbl_prefix = $tbl_prefix; // Prefix for all database tables
         $this->tbl_members = $tbl_members;
-        $this->tbl_attempts = $tbl_attempts;
+        $this->tbl_products = $tbl_products;
+        $this->tbl_reviews = $tbl_reviews;
 
         try {
 			// Connect to server and select database.
