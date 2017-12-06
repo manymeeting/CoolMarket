@@ -42,4 +42,6 @@ testem.log
 Thumbs.db
 
 # application specified
+/config.php
+/dbconn/dbconf.php
 
