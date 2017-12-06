@@ -2,12 +2,12 @@
 //Class Autoloader
 spl_autoload_register(function ($className) {
     $className = strtolower($className);
-    $includes = dirname(__FILE__).'/' . "../includes/{$className}.php";
+    $functions = dirname(__FILE__).'/' . "../functions/{$className}.php";
     $forms = dirname(__FILE__).'/' . "../forms/{$className}.php";
     $dbconn = dirname(__FILE__).'/' . "../dbconn/{$className}.php";
-    if (file_exists($includes)) {
+    if (file_exists($functions)) {
 
-        require_once($includes);
+        require_once($functions);
     } 
     else if (file_exists($forms))
     {
