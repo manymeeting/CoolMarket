@@ -1,8 +1,111 @@
+<?php
+// define variables and set to empty values
+$message="";
+$idErr = $passwordErr = $nameErr = $emailErr = $phoneErr = "";
+$id = $password = $firstname = $lastname = $email =  $homeaddress = $homephone = $cellphone = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $conn = mysqli_connect("127.0.0.1","root","ChenqicHenqi666", "coolmarket");
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+  }
+
+  if (empty($_POST["id"])) {
+    $idErr = "Username is required";
+  } else {
+    $id = test_input($_POST["id"]);
+  }
+
+  if (empty($_POST["password"])) {
+    $passwordErr = "Password is required";
+  } else {
+    $password = test_input($_POST["password"]);
+  }
+
+  if (empty($_POST["firstname"])) {
+    $nameErr = "First Name is required";
+  } else {
+    $firstname = test_input($_POST["firstname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$firstname)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+
+  if (empty($_POST["lastname"])) {
+    $nameErr = "Last Name is required";
+  } else {
+    $lastname = test_input($_POST["lastname"]);
+    // check if name only contains letters and whitespace
+    if (!preg_match("/^[a-zA-Z ]*$/",$lastname)) {
+      $nameErr = "Only letters and white space allowed"; 
+    }
+  }
+  
+  if (empty($_POST["email"])) {
+    $emailErr = "Email is required";
+  } else {
+    $email = $_POST["email"];
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+  }
+
+  if (empty($_POST["homeaddress"])) {
+    $homeaddress = "";
+  } else {
+    $homeaddress = test_input($_POST["homeaddress"]);
+  }
+
+  if (empty($_POST["homephone"])) {
+    $homephone = "";
+  } else {
+    $homephone = test_input($_POST["homephone"]);
+    if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $homephone)) {
+      $phoneErr = "Invalid phone number format";
+    }
+  }
+
+  if (empty($_POST["cellphone"])) {
+    $cellphone = "";
+  } else {
+    $cellphone = test_input($_POST["cellphone"]);
+    if(!preg_match("/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/", $cellphone)) {
+      $phoneErr = "Invalid phone number format";
+    }
+  }
+  
+  $result = mysqli_query($conn,"SELECT * FROM members WHERE id='" . $_POST["id"] . "'");
+  $count  = mysqli_num_rows($result);
+  if($count!=0) {
+    $message = "User Already Exists!";
+  } else if(!empty($_POST["firstname"]) && !empty($_POST["lastname"]) && !empty($_POST["email"])){
+    //$sql = "INSERT INTO users (FirstName, LastName, Email, HomeAddress, HomePhone, CellPhone) VALUES ('"$firstname"', '"$lastname"', '"$email"', '"$homeaddress"', '"$homephone"', '"$cellphone"')";
+    $sql = "INSERT INTO members (id, password, first_name, last_name, email, address, home_phone, cell_phone) VALUES ('$id', '$password', '$firstname', '$lastname', '$email', '$homeaddress', '$homephone', '$cellphone')";
+    if (mysqli_query($conn, $sql)) {
+      $message = "New User Created!";
+    } else {
+      echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+  }
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+?>
+
+
+
 <!DOCTYPE HTML>
 <html>
 
 <head>
-    <title>Traveler - User List</title>
+    <title>Traveler - Account Settings</title>
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -26,6 +129,7 @@
 </head>
 
 <body>
+
 
     <!-- FACEBOOK WIDGET -->
     <div id="fb-root"></div>
@@ -108,45 +212,62 @@
         </header>
 
         <div class="container">
-            <h1 class="page-title">Users</h1>
+            <h1 class="page-title">Create New User</h1>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-bordered table-striped table-booking-history">
-                        <thead>
-                            <tr>
-                                <th>Username</th>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Home Address</th>
-                                <th>Home Phone</th>
-                                <th>Cell Phone</th>
-                            </tr>
-                        </thead>
-                        <tbody>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><span class="error">* required field.</span></p>
+                            <form method="post" action="">
+                                <h4>Personal Infomation</h4>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
+                                    <label>Username</label>
+                                    <input class="form-control" name="id" value="<?php echo $id;?>" type="text" /><span class="error"> * <?php echo $idErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
+                                    <label>Password</label>
+                                    <input class="form-control" name="password" value="<?php echo $password;?>" type="password" /><span class="error"> * <?php echo $passwordErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
+                                    <label>First Name</label>
+                                    <input class="form-control" name="firstname" value="<?php echo $firstname;?>" type="text" /><span class="error"> * <?php echo $nameErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
+                                    <label>Last Name</label>
+                                    <input class="form-control" name="lastname" value="<?php echo $lastname;?>" type="text" /><span class="error"> * <?php echo $nameErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-envelope input-icon"></i>
+                                    <label>E-mail</label>
+                                    <input class="form-control" name="email" value="<?php echo $email;?>" type="text" /><span class="error"> * <?php echo $emailErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+                                    <label>Home Phone Number</label>
+                                    <input class="form-control" name="homephone" value="<?php echo $homephone;?>" type="text" placeholder="XXX-XXX-XXXX" /><span class="error"><?php echo $phoneErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+                                    <label>Cell Phone Number</label>
+                                    <input class="form-control" name="cellphone" value="<?php echo $cellphone;?>" placeholder="XXX-XXX-XXXX" type="text" /><span class="error"><?php echo $phoneErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+                                    <label>Home Address</label>
+                                    <input class="form-control" name="homeaddress" value="<?php echo $homeaddress;?>" type="text" />
+                                </div>
+                                <div class="gap gap-small"></div>
+                                
+                                <hr>
+                                <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                            </form>
+                            <div class="gap gap-small"></div>
+                            <strong>
                             <?php
-                            $conn = mysqli_connect("127.0.0.1","root","ChenqicHenqi666", "coolmarket");
-                            if (!$conn) {
-                                die("Connection failed: " . mysqli_connect_error());
-                            }
-                            $result = mysqli_query($conn,"SELECT * FROM members");
-                            while($row = mysqli_fetch_assoc($result)) {
-                                $html =
-                                '<tr class="text">'. 
-                                    "<td>".$row['id']."</td>".
-                                    "<td>".$row['first_name']." ".$row['last_name']."</td>".
-                                    "<td>".$row['email']."</td>".
-                                    "<td>".$row['address']."</td>".
-                                    "<td>".$row['home_phone']."</td>".
-                                    "<td>".$row['cell_phone']."</td>".
-                                '</tr>';
-                                print $html. "\n";
-                            }
-                            ?>
-                        </tbody>
-                    </table>
+                            if($message!="") { echo $message; }
+                            ?></strong>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -161,7 +282,7 @@
                         <a class="logo" href="index.html">
                             <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
                         </a>
-                        <p class="mb20">272 fnial project by Mutian, Ruifeng, Na, Wenqi and Nancy!</p>
+                        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
                         <ul class="list list-horizontal list-space">
                             <li>
                                 <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
@@ -195,15 +316,19 @@
                         <ul class="list list-footer">
                             <li><a href="#">About US</a>
                             </li>
-                            <li><a href="#">Markets</a>
+                            <li><a href="#">Press Centre</a>
                             </li>
-                            <li><a href="#">News</a>
+                            <li><a href="#">Best Price Guarantee</a>
                             </li>
-                            <li><a href="#">Contacts</a>
+                            <li><a href="#">Travel News</a>
                             </li>
-                            <li><a href="#">Activities</a>
+                            <li><a href="#">Jobs</a>
                             </li>
-                            <li><a href="#">Users</a>
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                            <li><a href="#">Feedback</a>
                             </li>
                         </ul>
                     </div>

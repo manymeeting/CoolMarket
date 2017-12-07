@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Traveler - User List</title>
+    <title>Traveler - Booking History</title>
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -117,7 +117,6 @@
                     <table class="table table-bordered table-striped table-booking-history">
                         <thead>
                             <tr>
-                                <th>Username</th>
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Home Address</th>
@@ -126,25 +125,76 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php
-                            $conn = mysqli_connect("127.0.0.1","root","ChenqicHenqi666", "coolmarket");
-                            if (!$conn) {
-                                die("Connection failed: " . mysqli_connect_error());
-                            }
-                            $result = mysqli_query($conn,"SELECT * FROM members");
-                            while($row = mysqli_fetch_assoc($result)) {
-                                $html =
-                                '<tr class="text">'. 
-                                    "<td>".$row['id']."</td>".
-                                    "<td>".$row['first_name']." ".$row['last_name']."</td>".
-                                    "<td>".$row['email']."</td>".
-                                    "<td>".$row['address']."</td>".
-                                    "<td>".$row['home_phone']."</td>".
-                                    "<td>".$row['cell_phone']."</td>".
-                                '</tr>';
-                                print $html. "\n";
-                            }
-                            ?>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
+                            <tr>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
