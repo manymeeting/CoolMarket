@@ -40,7 +40,7 @@ class ProductForm extends DbConn
 			
 			$row = $resultRatingObj->fetch(PDO::FETCH_ASSOC);
 			$resultRating = $row['avg'];
-			echo $resultRating;
+			// echo $resultRating;
 			// update product rating			
 			$dbstrProduct = "UPDATE products SET rating = '$resultRating' WHERE id = '$id'" ;
 			$result = $db->conn->query($dbstrProduct);
