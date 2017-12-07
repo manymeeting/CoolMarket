@@ -63,60 +63,9 @@
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     <li class="top-user-area-avatar">
                                         <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Hi, John</a>
+                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Welcome</a>
                                     </li>
                                     <li><a href="#">Sign Out</a>
-                                    </li>
-                                    <li class="nav-drop"><a href="#">USD $<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i></a>
-                                        <ul class="list nav-drop-menu">
-                                            <li><a href="#">EUR<span class="right">€</span></a>
-                                            </li>
-                                            <li><a href="#">GBP<span class="right">£</span></a>
-                                            </li>
-                                            <li><a href="#">JPY<span class="right">円</span></a>
-                                            </li>
-                                            <li><a href="#">CAD<span class="right">$</span></a>
-                                            </li>
-                                            <li><a href="#">AUD<span class="right">A$</span></a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="top-user-area-lang nav-drop">
-                                        <a href="#">
-                                            <img src="img/flags/32/uk.png" alt="Image Alternative text" title="Image Title" />ENG<i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i>
-                                        </a>
-                                        <ul class="list nav-drop-menu">
-                                            <li>
-                                                <a title="German" href="#">
-                                                    <img src="img/flags/32/de.png" alt="Image Alternative text" title="Image Title" /><span class="right">GER</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Japanise" href="#">
-                                                    <img src="img/flags/32/jp.png" alt="Image Alternative text" title="Image Title" /><span class="right">JAP</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Italian" href="#">
-                                                    <img src="img/flags/32/it.png" alt="Image Alternative text" title="Image Title" /><span class="right">ITA</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="French" href="#">
-                                                    <img src="img/flags/32/fr.png" alt="Image Alternative text" title="Image Title" /><span class="right">FRE</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Russian" href="#">
-                                                    <img src="img/flags/32/ru.png" alt="Image Alternative text" title="Image Title" /><span class="right">RUS</span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a title="Korean" href="#">
-                                                    <img src="img/flags/32/kr.png" alt="Image Alternative text" title="Image Title" /><span class="right">KOR</span>
-                                                </a>
-                                            </li>
-                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -127,335 +76,31 @@
             <div class="container">
                 <div class="nav">
                     <ul class="slimmenu" id="slimmenu">
-                        <li><a href="index.html">Home</a>
+                        <li class="active"><a href="index.html">Home</a>
+                        </li>
+                        <li><a href="success-payment.html">About</a>
+                        </li>
+                        <li><a href="feature-typography.html">Markets</a>
                             <ul>
-                                <li><a href="index.html">Default</a>
+                                <li><a href="#">Mutian</a>
                                 </li>
-                                <li><a href="index-1.html">Layout 1</a>
+                                <li><a href="#">Nancy</a>
                                 </li>
-                                <li><a href="index-2.html">Layout 2</a>
+                                <li><a href="#">Ruifeng</a>
                                 </li>
-                                <li><a href="index-3.html">Layout 3</a>
+                                <li><a href="#">Vencci</a>
                                 </li>
-                                <li><a href="index-4.html">Layout 4</a>
-                                </li>
-                                <li><a href="index-5.html">Layout 5</a>
-                                </li>
-                                <li><a href="index-6.html">Layout 6</a>
-                                </li>
-                                <li><a href="index-7.html">Layout 7</a>
+                                <li><a href="#">Yue</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="active"><a href="success-payment.html">Pages</a>
-                            <ul>
-                                <li><a href="success-payment.html">Success Payment</a>
-                                </li>
-                                <li class="active"><a href="user-profile.html">User Profile</a>
-                                    <ul>
-                                        <li><a href="user-profile.html">Overview</a>
-                                        </li>
-                                        <li><a href="user-profile-settings.html">Settings</a>
-                                        </li>
-                                        <li><a href="user-profile-photos.html">Photos</a>
-                                        </li>
-                                        <li class="active"><a href="user-profile-booking-history.html">Booking History</a>
-                                        </li>
-                                        <li><a href="user-profile-cards.html">Cards</a>
-                                        </li>
-                                        <li><a href="user-profile-wishlist.html">Wishlist</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog.html">Blog</a>
-                                    <ul>
-                                        <li><a href="blog.html">Sidebar Right</a>
-                                        </li>
-                                        <li><a href="blog-sidebar-left.html">Sidebar Left</a>
-                                        </li>
-                                        <li><a href="blog-full-width.html">Full Width</a>
-                                        </li>
-                                        <li><a href="blog-post.html">Post</a>
-                                            <ul>
-                                                <li><a href="blog-post.html">Sidebar Right</a>
-                                                </li>
-                                                <li><a href="blog-post-sidebar-left.html">Sidebar Left</a>
-                                                </li>
-                                                <li><a href="blog-post-full-width.html">Full Width</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="404.html">404 page</a>
-                                </li>
-                                <li><a href="contact-us.html">Contact Us</a>
-                                </li>
-                                <li><a href="about.html">About</a>
-                                </li>
-                                <li><a href="login-register.html">Login/Register</a>
-                                    <ul>
-                                        <li><a href="login-register.html">Full Page</a>
-                                        </li>
-                                        <li><a href="login-register-normal.html">Normal</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="loading.html">Loading</a>
-                                </li>
-                                <li><a href="comming-soon.html">Comming Soon</a>
-                                </li>
-                                <li><a href="gallery.html">Gallery</a>
-                                    <ul>
-                                        <li><a href="gallery.html">4 Columns</a>
-                                        </li>
-                                        <li><a href="gallery-3-col.html">3 columns</a>
-                                        </li>
-                                        <li><a href="gallery-2-col.html">2 columns</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="page-full-width.html">Full Width</a>
-                                </li>
-                                <li><a href="page-sidebar-right.html">Sidebar Right</a>
-                                </li>
-                                <li><a href="page-sidebar-left.html">Sidebar Left</a>
-                                </li>
-                            </ul>
+                        <li><a href="#">News</a>
                         </li>
-                        <li><a href="feature-typography.html">Features</a>
-                            <ul>
-                                <li><a href="feature-typography.html">Typography</a>
-                                </li>
-                                <li><a href="feature-icons.html">Icons</a>
-                                </li>
-                                <li><a href="feature-forms.html">Forms</a>
-                                </li>
-                                <li><a href="feature-icon-effects.html">Icon Effects</a>
-                                </li>
-                                <li><a href="feature-elements.html">Elements</a>
-                                </li>
-                                <li><a href="feature-grid.html">Grid</a>
-                                </li>
-                                <li><a href="feature-hovers.html">Hover effects</a>
-                                </li>
-                                <li><a href="feature-lightbox.html">Lightbox</a>
-                                </li>
-                                <li><a href="feature-media.html">Media</a>
-                                </li>
-                            </ul>
+                        <li><a href="#">Contacts</a>
                         </li>
-                        <li><a href="hotels.html">Hotels</a>
-                            <ul>
-                                <li><a href="hotel-details.html">Details</a>
-                                    <ul>
-                                        <li><a href="hotel-details.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="hotel-details-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="hotel-details-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="hotel-details-4.html">Layout 4</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="hotel-payment.html">Payment</a>
-                                    <ul>
-                                        <li><a href="hotel-payment.html">Registered</a>
-                                        </li>
-                                        <li><a href="hotel-payment-registered-card.html">Existed Cards</a>
-                                        </li>
-                                        <li><a href="hotel-payment-unregistered.html">Unregistered</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="hotel-search.html">Search</a>
-                                    <ul>
-                                        <li><a href="hotel-search.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="hotel-search-2.html">Layout 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="hotels.html">Results</a>
-                                    <ul>
-                                        <li><a href="hotels.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="hotels-search-results-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="hotels-search-results-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="hotels-search-results-4.html">Layout 4</a>
-                                        </li>
-                                        <li><a href="hotel-search-results-5.html">Layout 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li><a href="#">Activities</a>
                         </li>
-                        <li><a href="flights.html">Flights</a>
-                            <ul>
-                                <li><a href="flight-payment.html">Payment</a>
-                                    <ul>
-                                        <li><a href="flight-payment.html">Registered</a>
-                                        </li>
-                                        <li><a href="flight-payment-registered-card.html">Existed Cards</a>
-                                        </li>
-                                        <li><a href="flight-payment-unregistered.html">Unregistered</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="flight-search.html">Search</a>
-                                    <ul>
-                                        <li><a href="flight-search.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="flight-search-2.html">Layout 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="flights.html">List</a>
-                                    <ul>
-                                        <li><a href="flights.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="flights-search-results-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="flights-search-results-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="flights-search-results-4.html">Layout 4</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="rentals.html">Rentals</a>
-                            <ul>
-                                <li><a href="rentals-details.html">Details</a>
-                                    <ul>
-                                        <li><a href="rentals-details.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="rentals-details-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="rentals-details-3.html">Layout 3</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="rental-payment.html">Payment</a>
-                                    <ul>
-                                        <li><a href="rental-payment.html">Registered</a>
-                                        </li>
-                                        <li><a href="rental-payment-registered-card.html">Existed Cards</a>
-                                        </li>
-                                        <li><a href="rental-payment-unregistered.html">Unregistered</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="rentals-search.html">Search</a>
-                                    <ul>
-                                        <li><a href="rentals-search.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="rentals-search-2.html">Layout 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="rentals.html">Results</a>
-                                    <ul>
-                                        <li><a href="rentals.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="rentals-search-results-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="rentals-search-results-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="rentals-search-results-4.html">Layout 4</a>
-                                        </li>
-                                        <li><a href="rentals-search-results-5.html">Layout 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="cars.html">Cars</a>
-                            <ul>
-                                <li><a href="car-details.html">Details</a>
-                                </li>
-                                <li><a href="car-payment.html">Payment</a>
-                                    <ul>
-                                        <li><a href="car-payment.html">Registered</a>
-                                        </li>
-                                        <li><a href="car-payment-registered-card.html">Existed Cards</a>
-                                        </li>
-                                        <li><a href="car-payment-unregistered.html">Unregistered</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="car-search.html">Search</a>
-                                    <ul>
-                                        <li><a href="car-search.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="car-search-2.html">Layout 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="cars.html">Results</a>
-                                    <ul>
-                                        <li><a href="cars.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="cars-results-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="cars-results-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="cars-results-4.html">Layout 4</a>
-                                        </li>
-                                        <li><a href="cars-results-5.html">Layout 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="activities.html">Activities</a>
-                            <ul>
-                                <li><a href="activitiy-details.html">Details</a>
-                                    <ul>
-                                        <li><a href="activitiy-details.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="activitiy-details-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="activitiy-details-3.html">Layout 3</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="activity-search.html">Search</a>
-                                    <ul>
-                                        <li><a href="activity-search.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="activity-search-2.html">Layout 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="activitiy-payment.html">Payment</a>
-                                    <ul>
-                                        <li><a href="activitiy-payment.html">Registered</a>
-                                        </li>
-                                        <li><a href="activity-payment-registered-card.html">Existed Cards</a>
-                                        </li>
-                                        <li><a href="activitiy-payment-unregistered.html">Unregistered</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="activities.html">Results</a>
-                                    <ul>
-                                        <li><a href="activities.html">Layout 1</a>
-                                        </li>
-                                        <li><a href="activities-search-results-2.html">Layout 2</a>
-                                        </li>
-                                        <li><a href="activities-search-results-3.html">Layout 3</a>
-                                        </li>
-                                        <li><a href="activities-search-results-4.html">Layout 4</a>
-                                        </li>
-                                        <li><a href="activities-search-results-5.html">Layout 5</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li><a href="#">Users</a>
                         </li>
                     </ul>
                 </div>
@@ -463,180 +108,92 @@
         </header>
 
         <div class="container">
-            <h1 class="page-title">Booking History</h1>
+            <h1 class="page-title">Users</h1>
         </div>
-
-
-
 
         <div class="container">
             <div class="row">
-                <div class="col-md-3">
-                    <aside class="user-profile-sidebar">
-                        <div class="user-profile-avatar text-center">
-                            <img src="img/300x300.png" alt="Image Alternative text" title="AMaze" />
-                            <h5>John Doe</h5>
-                            <p>Member Since May 2012</p>
-                        </div>
-                        <ul class="list user-profile-nav">
-                            <li><a href="user-profile.html"><i class="fa fa-user"></i>Overview</a>
-                            </li>
-                            <li><a href="user-profile-settings.html"><i class="fa fa-cog"></i>Settings</a>
-                            </li>
-                            <li><a href="user-profile-photos.html"><i class="fa fa-camera"></i>My Travel Photos</a>
-                            </li>
-                            <li><a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>Booking History</a>
-                            </li>
-                            <li><a href="user-profile-cards.html"><i class="fa fa-credit-card"></i>Credit/Debit Cards</a>
-                            </li>
-                            <li><a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>Wishlist</a>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
-                <div class="col-md-9">
-                    <div class="checkbox">
-                        <label>
-                            <input class="i-check" type="checkbox" />Show only current trip</label>
-                    </div>
+                <div class="col-md-12">
                     <table class="table table-bordered table-striped table-booking-history">
                         <thead>
                             <tr>
-                                <th>Type</th>
-                                <th>Title</th>
-                                <th>Location</th>
-                                <th>Order Date</th>
-                                <th>Execution Date</th>
-                                <th>Cost</th>
-                                <th>Current</th>
-                                <th>Cancel</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Home Address</th>
+                                <th>Home Phone</th>
+                                <th>Cell Phone</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-plane"></i><small>flight</small>
-                                </td>
-                                <td class="booking-history-title">London to New York City</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/25/2014</td>
-                                <td>$350</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"><a class="btn btn-default btn-sm" href="#">Cancel</a>
-                                </td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-building-o"></i><small>hotel</small>
-                                </td>
-                                <td class="booking-history-title">InterContinental New York Barclay</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/25/2014 <i class="fa fa-long-arrow-right"></i> 4/30/2014</td>
-                                <td>$1200</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"><a class="btn btn-default btn-sm" href="#">Cancel</a>
-                                </td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-dashboard"></i><small>car</small>
-                                </td>
-                                <td class="booking-history-title">Maserati GranTurismo</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/25/2014 <i class="fa fa-long-arrow-right"></i> 4/30/2014</td>
-                                <td>$500</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"><a class="btn btn-default btn-sm" href="#">Cancel</a>
-                                </td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-bolt"></i><small>activity</small>
-                                </td>
-                                <td class="booking-history-title">Central Park Trip</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/27/2014</td>
-                                <td>$0</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"></td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-bolt"></i><small>activity</small>
-                                </td>
-                                <td class="booking-history-title">Music Festival</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/28/2014</td>
-                                <td>$100</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"><a class="btn btn-default btn-sm" href="#">Cancel</a>
-                                </td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-bolt"></i><small>activity</small>
-                                </td>
-                                <td class="booking-history-title">Adrenaline Madness</td>
-                                <td>New york City</td>
-                                <td>4/12/2014</td>
-                                <td>4/29/2014</td>
-                                <td>$210</td>
-                                <td class="text-center"><i class="fa fa-check"></i>
-                                </td>
-                                <td class="text-center"><a class="btn btn-default btn-sm" href="#">Cancel</a>
-                                </td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-plane"></i><small>flight</small>
-                                </td>
-                                <td class="booking-history-title">London to Bali</td>
-                                <td>Bali</td>
-                                <td>2/12/2014</td>
-                                <td>2/20/2014</td>
-                                <td>$500</td>
-                                <td class="text-center"><i class="fa fa-times"></i>
-                                </td>
-                                <td class="text-center"></td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-home"></i><small>rental</small>
-                                </td>
-                                <td class="booking-history-title">Modern Chic 3BR Villa Fanisa</td>
-                                <td>Bali</td>
-                                <td>2/12/2014</td>
-                                <td>2/20/2014 <i class="fa fa-long-arrow-right"></i> 2/23/2014</td>
-                                <td>$800</td>
-                                <td class="text-center"><i class="fa fa-times"></i>
-                                </td>
-                                <td class="text-center"></td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-plane"></i><small>flight</small>
-                                </td>
-                                <td class="booking-history-title">London to San Fancisco</td>
-                                <td>San Fancisco</td>
-                                <td>1/01/2014</td>
-                                <td>1/05/2014</td>
-                                <td>$423</td>
-                                <td class="text-center"><i class="fa fa-times"></i>
-                                </td>
-                                <td class="text-center"></td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                             <tr>
-                                <td class="booking-history-type"><i class="fa fa-building-o"></i><small>hotel</small>
-                                </td>
-                                <td class="booking-history-title">Wellington Hotel</td>
-                                <td>San Fancisco</td>
-                                <td>1/01/2014</td>
-                                <td>1/05/2014 <i class="fa fa-long-arrow-right"></i> 1/15/2014</td>
-                                <td>$850</td>
-                                <td class="text-center"><i class="fa fa-times"></i>
-                                </td>
-                                <td class="text-center"></td>
+                                <td class="individual-user">Jony J</td>
+                                <td>abc@123.com</td>
+                                <td>123 ABC Drive, CD, EF 12345</td>
+                                <td>123-456-7890</td>
+                                <td>123-456-7890</td>
                             </tr>
                         </tbody>
                     </table>
@@ -654,7 +211,7 @@
                         <a class="logo" href="index.html">
                             <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
                         </a>
-                        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <p class="mb20">272 fnial project by Mutian, Ruifeng, Na, Wenqi and Nancy!</p>
                         <ul class="list list-horizontal list-space">
                             <li>
                                 <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
@@ -688,19 +245,15 @@
                         <ul class="list list-footer">
                             <li><a href="#">About US</a>
                             </li>
-                            <li><a href="#">Press Centre</a>
+                            <li><a href="#">Markets</a>
                             </li>
-                            <li><a href="#">Best Price Guarantee</a>
+                            <li><a href="#">News</a>
                             </li>
-                            <li><a href="#">Travel News</a>
+                            <li><a href="#">Contacts</a>
                             </li>
-                            <li><a href="#">Jobs</a>
+                            <li><a href="#">Activities</a>
                             </li>
-                            <li><a href="#">Privacy Policy</a>
-                            </li>
-                            <li><a href="#">Terms of Use</a>
-                            </li>
-                            <li><a href="#">Feedback</a>
+                            <li><a href="#">Users</a>
                             </li>
                         </ul>
                     </div>
