@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Traveler - Contact Us</title>
+    <title>CoolMarket - Contact Us</title>
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -476,8 +476,8 @@
             <div class="gap"></div>
             <div class="row">
                 <div class="col-md-7">
-                    <p>Inceptos hac sagittis sit elit primis iaculis arcu quam justo per primis tempus ad iaculis cursus condimentum nullam pretium dui id sit lacus duis dignissim primis potenti aliquam malesuada ullamcorper</p>
-                    <p>Euismod volutpat risus luctus id varius volutpat adipiscing porttitor egestas nisl nunc luctus phasellus nibh tristique lacinia penatibus justo urna</p>
+                    <p>Cool Market is where style meets savings,  a premier flash sale site featuring top brands at incredible savings, we’re giving you even more ways to shop. </p>
+                    <p>Whether in-store, online or on the go with our mobile apps, shopping your way is easier (and better) than ever!</p>
                     <form class="mt30">
                         <div class="row">
                             <div class="col-md-6">
@@ -504,16 +504,16 @@
                     <aside class="sidebar-right">
                         <ul class="address-list list">
                             <li>
-                                <h5>Email</h5><a href="#">info@traveler.com</a>
+                                <h5>Email</h5><a href="#">info@coolmarket.com</a>
                             </li>
                             <li>
-                                <h5>Phone Number</h5><a href="#">+1 (426) 642-8525</a>
+                                <h5>Phone Number</h5><a href="#">+1 (123) 456-7890</a>
                             </li>
                             <li>
-                                <h5>Skype</h5><a href="#">contact_traveller</a>
+                                <h5>Skype</h5><a href="#">contact_CoolMarket</a>
                             </li>
                             <li>
-                                <h5>Address</h5><address>Traveler Ltd.<br />1355 Market St, Suite 900<br />San Francisco, CA 94103<br />United States<br /></address>
+                                <h5>Address</h5><address>CoolMarket Ltd.<br />168 Market St, Suite 888<br />San Francisco, CA 94103<br />United States<br /></address>
                             </li>
                         </ul>
                     </aside>
@@ -531,7 +531,7 @@
                         <a class="logo" href="index.html">
                             <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
                         </a>
-                        <p class="mb20">Booking, reviews and advices on hotels, resorts, flights, vacation rentals, travel packages, and lots more!</p>
+                        <p class="mb20">Buying, reviews and advices on Bags, Clothing, Shoes, Accessories, and lots more!</p>
                         <ul class="list list-horizontal list-space">
                             <li>
                                 <a class="fa fa-facebook box-icon-normal round animate-icon-bottom-to-top" href="#"></a>
@@ -569,7 +569,7 @@
                             </li>
                             <li><a href="#">Best Price Guarantee</a>
                             </li>
-                            <li><a href="#">Travel News</a>
+                            <li><a href="#">Market News</a>
                             </li>
                             <li><a href="#">Jobs</a>
                             </li>
@@ -584,7 +584,7 @@
                     <div class="col-md-4">
                         <h4>Have Questions?</h4>
                         <h4 class="text-color">+1-202-555-0173</h4>
-                        <h4><a href="#" class="text-color">support@traveler.com</a></h4>
+                        <h4><a href="#" class="text-color">support@coolmarket.com</a></h4>
                         <p>24/7 Dedicated Customer Support</p>
                     </div>
 
