@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Traveler - About Us</title>
+    <title>CoolMarket - About Us</title>
 
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
@@ -472,8 +472,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <p class="text-bigger">Felis turpis nostra arcu tempus rutrum hac ullamcorper torquent volutpat pellentesque adipiscing ut elementum sollicitudin sodales congue quam rutrum habitant accumsan elit scelerisque accumsan proin varius purus scelerisque taciti nam</p>
-                    <p class="text-bigger">Venenatis diam malesuada faucibus euismod congue eleifend ultricies bibendum augue dapibus nostra diam amet tincidunt commodo ullamcorper lorem maecenas nibh</p>
+                    <p class="text-bigger">Cool Market is where style meets savings,  a premier flash sale site featuring top brands at incredible savings, we’re giving you even more ways to shop.</p>
+                    <p class="text-bigger">Whether in-store, online or on the go with our mobile apps, shopping your way is easier (and better) than ever!</p>
                 </div>
             </div>
             <div class="gap"></div>
@@ -486,8 +486,8 @@
                     <div class="gap gap-big text-white">
                         <div class="row">
                             <div class="col-md-10">
-                                <h2>Work hard. Play hard.</h2>
-                                <p class="text-bigger">Scelerisque ornare ante pellentesque id ad eget volutpat consequat aptent lacus penatibus consectetur vivamus magnis ornare venenatis mattis rhoncus interdum quam tempor commodo ultrices augue risus senectus ornare aliquam leo rutrum nam duis nisi fringilla convallis praesent libero faucibus fermentum convallis pretium aptent nisl morbi odio justo vel nascetur tristique pulvinar senectus etiam quam taciti dignissim etiam tincidunt cras molestie</p>
+                                <h2>About Our Brand</h2>
+                                <p class="text-bigger">CoolMarket is the off-price retail division of CoolMarket Inc., which was founded in 1901 in San Francisco. And now that we are online, we hope we can serve you even better—giving you more ways to shop, wherever you may be.</p>
                             </div>
                         </div>
                     </div>
@@ -496,17 +496,21 @@
         </div>
         <div class="container">
             <div class="gap"></div>
-            <h2>Our Approach</h2>
+            <h2>Rewards</h2>
             <div class="row">
                 <div class="col-md-8">
-                    <p class="text-bigger">Cubilia gravida mus senectus donec consectetur dis ac vel quis a suscipit potenti purus aptent nibh gravida aliquet vestibulum varius dictum consectetur semper consectetur at varius donec sociis habitasse vivamus eget faucibus tempus donec lorem etiam volutpat blandit aliquam varius molestie nibh mattis adipiscing sodales dictumst volutpat quam rhoncus sodales</p>
+                    <p class="text-bigger">Become a member– it's easy and there's no cost to you. We just need your name, email and mobile number.</p>
+                    <p class="text-bigger">Earn 1 point per dollar you spend on CoolMarket. Earn even more by shopping on bonus points days.</p>
+                    <p class="text-bigger">For every 2,000 points, you’ll get a $20 CoolMarket Note to spend on anything. (Yes, anything.)</p>
                 </div>
             </div>
             <div class="gap"></div>
-            <h2>Rockstar Team</h2>
+            <h2>Key Facts</h2>
             <div class="row">
                 <div class="col-md-10">
-                    <p class="text-bigger mb30">Auctor sit parturient aenean sodales maecenas fusce potenti tristique lectus dapibus hendrerit habitant tristique vulputate vehicula quisque nisl curabitur varius enim quam maecenas facilisis inceptos auctor gravida massa facilisis risus</p>
+                    <p class="text-bigger mb30">Ongoing catalog of brands you love at amazing prices.</p>
+                    <p class="text-bigger mb30">New arrivals are added every week, so check back often!</p>
+                    <p class="text-bigger mb30">Easy to search and shop all your favorite styles</p>
                 </div>
             </div>
             <div class="row row-wrap" data-gutter="60">
@@ -685,7 +689,7 @@
                             </li>
                             <li><a href="#">Best Price Guarantee</a>
                             </li>
-                            <li><a href="#">Travel News</a>
+                            <li><a href="#">Market News</a>
                             </li>
                             <li><a href="#">Jobs</a>
                             </li>
@@ -700,7 +704,7 @@
                     <div class="col-md-4">
                         <h4>Have Questions?</h4>
                         <h4 class="text-color">+1-202-555-0173</h4>
-                        <h4><a href="#" class="text-color">support@traveler.com</a></h4>
+                        <h4><a href="#" class="text-color">support@coolmarket.com</a></h4>
                         <p>24/7 Dedicated Customer Support</p>
                     </div>
 
