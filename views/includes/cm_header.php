@@ -47,8 +47,6 @@
                         </li>
                         <li id="nav_contact"><a href="contact_us.php">Contacts</a>
                         </li>
-                        <li id="nav_activities"><a href="#">Activities</a>
-                        </li>
                         <li id="nav_users"><a href="users_list.php">Users</a>
                         </li>
                     </ul>
