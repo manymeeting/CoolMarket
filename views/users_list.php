@@ -7,7 +7,7 @@ require dirname(__FILE__).'/' . '../functions/functions.php';
 <html>
 
 <head>
-    <title>Traveler - User List</title>
+    <title>CoolMarket - User List</title>
     <?php require("./includes/cm_head_resources.php"); ?>
 </head>
 
@@ -38,6 +38,18 @@ require dirname(__FILE__).'/' . '../functions/functions.php';
         </div>
 
         <div class="container">
+
+            <?php
+            // only admin is able to create user
+            if($_SESSION["isAdmin"])
+            {
+                $html =
+                '<a href="create_user.php" id="userCreateBtn" class="btn btn-primary mt10">Create User</a> '.
+                '<div class="gap gap-small"></div>';
+                print $html. "\n";
+            }
+            ?>
+            
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-bordered table-striped table-booking-history">
