@@ -1,7 +1,7 @@
 <?php
 class CURLer
 {
-    $this->url = ""; // Host name
+    public $url = ""; // Host name
     public function setURL($url)
     {
         $this->url = $url;
@@ -16,7 +16,7 @@ class CURLer
 
         curl_setopt($cu, CURLOPT_POST, 1);
         curl_setopt($cu, CURLOPT_POSTFIELDS, $post_data);
-        curl_setopt($cu, CURLOPT_URL, $this->$url);
+        curl_setopt($cu, CURLOPT_URL, $this->url);
         $response = curl_exec($cu);
         curl_close($cu);
         return $response;   

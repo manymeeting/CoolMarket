@@ -3,8 +3,6 @@
 
 <head>
     <title>Traveler - Hotels</title>
-
-
     <?php require("./includes/cm_head_resources.php"); ?>
 
 </head>
