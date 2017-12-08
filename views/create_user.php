@@ -1,3 +1,15 @@
+<?php
+session_start();
+require dirname(__FILE__).'/' . '../ctl/checkSession.php';
+require dirname(__FILE__).'/' . '../functions/functions.php';
+// check admin identity
+if(!$_SESSION['isAdmin'])
+{
+    $login_location = "login.php";
+    header("Location: " . $login_location);
+    exit();
+}
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -38,39 +50,35 @@
                     <div class="row">
                         <div class="col-md-6">
                             <p><span class="error">* required field.</span></p>
-                            <form method="post" action="">
+                            <form method="post" action="../ctl/createUser.php">
                                 <h4>Personal Infomation</h4>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
-                                    <label>Username</label>
-                                    <input class="form-control" name="id" value="<?php echo $id;?>" type="text" /><span class="error"> * <?php echo $idErr;?></span>
-                                </div>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
-                                    <label>Password</label>
-                                    <input class="form-control" name="password" value="<?php echo $password;?>" type="password" /><span class="error"> * <?php echo $passwordErr;?></span>
-                                </div>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
-                                    <label>First Name</label>
-                                    <input class="form-control" name="firstname" value="<?php echo $firstname;?>" type="text" /><span class="error"> * <?php echo $nameErr;?></span>
-                                </div>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-user input-icon"></i>
-                                    <label>Last Name</label>
-                                    <input class="form-control" name="lastname" value="<?php echo $lastname;?>" type="text" /><span class="error"> * <?php echo $nameErr;?></span>
-                                </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-envelope input-icon"></i>
-                                    <label>E-mail</label>
-                                    <input class="form-control" name="email" value="<?php echo $email;?>" type="text" /><span class="error"> * <?php echo $emailErr;?></span>
+                                    <label>E-mail *</label>
+                                    <input class="form-control" name="email" value="<?php echo $email;?>" type="text" /><span class="error"><?php echo $emailErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-key input-icon"></i>
+                                    <label>Password *</label>
+                                    <input class="form-control" name="password" value="<?php echo $password;?>" type="password" /><span class="error"><?php echo $passwordErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-pencil input-icon"></i>
+                                    <label>First Name *</label>
+                                    <input class="form-control" name="firstname" value="<?php echo $firstname;?>" type="text" /><span class="error"><?php echo $nameErr;?></span>
+                                </div>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-pencil input-icon"></i>
+                                    <label>Last Name *</label>
+                                    <input class="form-control" name="lastname" value="<?php echo $lastname;?>" type="text" /><span class="error"><?php echo $nameErr;?></span>
                                 </div>
                                 <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
                                     <label>Home Phone Number</label>
                                     <input class="form-control" name="homephone" value="<?php echo $homephone;?>" type="text" placeholder="XXX-XXX-XXXX" /><span class="error"><?php echo $phoneErr;?></span>
                                 </div>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-mobile input-icon"></i>
                                     <label>Cell Phone Number</label>
                                     <input class="form-control" name="cellphone" value="<?php echo $cellphone;?>" placeholder="XXX-XXX-XXXX" type="text" /><span class="error"><?php echo $phoneErr;?></span>
                                 </div>
-                                <div class="form-group form-group-icon-left"><i class="fa fa-phone input-icon"></i>
+                                <div class="form-group form-group-icon-left"><i class="fa fa-home input-icon"></i>
                                     <label>Home Address</label>
-                                    <input class="form-control" name="homeaddress" value="<?php echo $homeaddress;?>" type="text" />
+                                    <input class="form-control" name="homeaddr" value="<?php echo $homeaddr;?>" type="text" />
                                 </div>
                                 <div class="gap gap-small"></div>
                                 
