@@ -43,7 +43,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li id="nav_news"><a href="#">News</a>
+                        <li id="nav_news"><a href="news.php">News</a>
                         </li>
                         <li id="nav_contact"><a href="contact_us.php">Contacts</a>
                         </li>
