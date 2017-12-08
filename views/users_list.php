@@ -1,3 +1,8 @@
+<?php
+session_start();
+require dirname(__FILE__).'/' . '../ctl/checkSession.php';
+require dirname(__FILE__).'/' . '../functions/functions.php';
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -38,8 +43,8 @@
                     <table class="table table-bordered table-striped table-booking-history">
                         <thead>
                             <tr>
-                                <th>Username</th>
-                                <th>Name</th>
+                                <th>First Name</th>
+                                <th>Last Name</th>
                                 <th>Email</th>
                                 <th>Home Address</th>
                                 <th>Home Phone</th>
@@ -48,23 +53,21 @@
                         </thead>
                         <tbody>
                             <?php
-                            $conn = mysqli_connect("127.0.0.1","root","ChenqicHenqi666", "coolmarket");
-                            if (!$conn) {
-                                die("Connection failed: " . mysqli_connect_error());
-                            }
-                            $result = mysqli_query($conn,"SELECT * FROM members");
-                            while($row = mysqli_fetch_assoc($result)) {
+                            $userForm = new UserForm;
+                            $users = $userForm->fetchAllUser();
+                            foreach ($users as $row) {
                                 $html =
                                 '<tr class="text">'. 
-                                    "<td>".$row['id']."</td>".
-                                    "<td>".$row['first_name']." ".$row['last_name']."</td>".
-                                    "<td>".$row['email']."</td>".
-                                    "<td>".$row['address']."</td>".
-                                    "<td>".$row['home_phone']."</td>".
-                                    "<td>".$row['cell_phone']."</td>".
+                                  "<td>".$row['firstname']."</td>".
+                                  "<td>".$row['lastname']."</td>".
+                                  "<td>".$row['email']."</td>".
+                                  "<td>".$row['homeaddr']."</td>".
+                                  "<td>".$row['homephone']."</td>".
+                                  "<td>".$row['cellphone']."</td>".
                                 '</tr>';
                                 print $html. "\n";
                             }
+                            
                             ?>
                         </tbody>
                     </table>
