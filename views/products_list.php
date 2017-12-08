@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Traveler - Hotels</title>
+    <title>CoolMarket - Products</title>
     <?php require("./includes/cm_head_resources.php"); ?>
 
 </head>
@@ -65,12 +65,12 @@
                 <div class="col-md-9">
                     <ul class="booking-list">
                         <li>
-                            <a class="booking-item" href="#">
+                            <a class="booking-item" href="product_details.php">
                                 <div class="row">
                                     <div class="col-md-3">
                                         <div class="booking-item-img-wrap">
                                             <img src="img/800x600.png" alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO suite lhotel living room" />
-                                            <div class="booking-item-img-num"><i class="fa fa-picture-o"></i>29</div>
+                                            <div class="booking-item-img-num"><i class="fa fa-picture-o"></i>1</div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -86,44 +86,16 @@
                                                 </li>
                                                 <li><i class="fa fa-star-half-empty"></i>
                                                 </li>
-                                            </ul><span class="booking-item-rating-number"><b >4.4</b> of 5</span><small>(406 reviews)</small>
+                                            </ul><span class="booking-item-rating-number"><b >4.4</b> of 5</span>
                                         </div>
-                                        <h5 class="booking-item-title">Bryant Park Hotel</h5>
-                                        <p class="booking-item-address"><i class="fa fa-map-marker"></i> New York, NY (Chelsea)</p><small class="booking-item-last-booked">Latest booking: 1 hour ago</small>
+                                        <h5 class="booking-item-title">Fly Me to the Moon</h5>
+                                        <p class="booking-item-address"><i class="fa fa-gift"></i> Mutian's Market</p><small class="product-item-status">Status : Available</small>
                                     </div>
-                                    <div class="col-md-3"><span class="booking-item-price-from">from</span><span class="booking-item-price">$207</span><span>/night</span><span class="btn btn-primary">Detail</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="booking-item" href="#">
-                                <div class="row">
                                     <div class="col-md-3">
-                                        <div class="booking-item-img-wrap">
-                                            <img src="img/800x600.png" alt="Image Alternative text" title="hotel PORTO BAY SERRA GOLF suite" />
-                                            <div class="booking-item-img-num"><i class="fa fa-picture-o"></i>15</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="booking-item-rating">
-                                            <ul class="icon-group booking-item-rating-stars">
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star-o"></i>
-                                                </li>
-                                            </ul><span class="booking-item-rating-number"><b >3.8</b> of 5</span><small>(379 reviews)</small>
-                                        </div>
-                                        <h5 class="booking-item-title">The Kimberly Hotel</h5>
-                                        <p class="booking-item-address"><i class="fa fa-map-marker"></i> Long Island City, NY (Long Island City - Astoria)</p><small class="booking-item-last-booked">Latest booking: 6 hours ago</small>
-                                    </div>
-                                    <div class="col-md-3"><span class="booking-item-price-from">from</span><span class="booking-item-price">$207</span><span>/night</span><span class="btn btn-primary">Detail</span>
+                                        <span class="booking-item-price-from">from</span>
+                                        <span class="booking-item-price">$207</span>
+                                        <span>in USD</span>
+                                        <span class="btn btn-primary">Detail</span>
                                     </div>
                                 </div>
                             </a>

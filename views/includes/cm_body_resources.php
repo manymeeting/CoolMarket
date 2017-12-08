@@ -8,7 +8,6 @@
         <script src="js/ionrangeslider.js"></script>
         <script src="js/icheck.js"></script>
         <script src="js/fotorama.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script src="js/typeahead.js"></script>
         <script src="js/card-payment.js"></script>
         <script src="js/magnific.js"></script>
@@ -18,3 +17,4 @@
         <script src="js/countdown.js"></script>
         <script src="js/gridrotator.js"></script>
         <script src="js/custom.js"></script>
+        <script src="js/functions.js"></script>
