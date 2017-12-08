@@ -66,7 +66,7 @@ if(count($_POST)>0) {
                                 </div>
                                 <div class="col-md-4">
                                     <h3 class="mb15">Login</h3>
-                                    <form name="frmUser" method="post" action="">
+                                    <form name="frmUser" method="post" action="../ctl/checkLogin.php">
                                         <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
                                             <label>Email</label>
                                             <input class="form-control" placeholder="e.g. johndoe@gmail.com" name="email" value="" type="text" />

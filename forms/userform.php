@@ -3,6 +3,31 @@
 class UserForm extends DbConn
 {
 
+    public function searchByEmail($email)
+    {
+        try
+        {
+            $db = new DbConn;
+            $tbl_members = $db->tbl_members;
+            // prepare sql and bind parameters
+            $dbstr = "SELECT * FROM " . $tbl_members . " WHERE " . "email = " . ":email";
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':email', $email);
+            
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+
+            $err = '';
+        }
+        catch (PDOException $e)
+        {
+            $err = "Error: " . $e->getMessage();
+            $result = null;
+        }
+
+        return $this->_ret($err, $result);   
+    }
+
     public function searchUser($searchBy, $searchValue)
     {
         try
