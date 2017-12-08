@@ -24,26 +24,8 @@ if(count($_POST)>0) {
 <html class="full">
 
 <head>
-    <title>Traveler - Login register</title>
-
-
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta name="keywords" content="Template, html, premium, themeforest" />
-    <meta name="description" content="Traveler - Premium template for travel companies">
-    <meta name="author" content="Tsoy">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600' rel='stylesheet' type='text/css'>
-    <!-- /GOOGLE FONTS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/mystyles.css">
-    <script src="js/modernizr.js"></script>
-
+    <title>CoolMarket - Login register</title>
+    <?php require("./includes/cm_head_resources.php"); ?>
 
 </head>
 
@@ -67,17 +49,17 @@ if(count($_POST)>0) {
         <div class="full-page">
             <div class="bg-holder full">
                 <div class="bg-mask"></div>
-                <div class="bg-img" style="background-image:url(img/1280x852.png);"></div>
+                <div class="bg-img" style="background-image:url(img/backgrounds/nature.jpg);"></div>
                 <div class="bg-holder-content full text-white">
                     <a class="logo-holder" href="index.html">
-                        <img src="img/logo-white.png" alt="Image Alternative text" title="Image Title" />
+                        <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
                     </a>
                     <div class="full-center">
                         <div class="container">
                             <div class="row row-wrap" data-gutter="60">
                                 <div class="col-md-4">
                                     <div class="visible-lg">
-                                        <h3 class="mb15">Welcome to Traveler</h3>
+                                        <h3 class="mb15">Welcome to CoolMarket</h3>
                                         <p>Ultrices lacus erat mattis nam sem porta nascetur luctus nunc litora diam ornare maecenas et phasellus molestie lorem habitant ultricies condimentum dignissim interdum erat sit praesent penatibus mattis pharetra penatibus</p>
                                         <p>Sodales amet consectetur consectetur curae placerat consectetur penatibus fusce sagittis</p>
                                     </div>
@@ -86,12 +68,12 @@ if(count($_POST)>0) {
                                     <h3 class="mb15">Login</h3>
                                     <form name="frmUser" method="post" action="">
                                         <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
-                                            <label>Username</label>
-                                            <input class="form-control" placeholder="your username" name="id" value="<?php echo $id;?>" type="text" />
+                                            <label>Email</label>
+                                            <input class="form-control" placeholder="e.g. johndoe@gmail.com" name="email" value="" type="text" />
                                         </div>
                                         <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-lock input-icon input-icon-show"></i>
                                             <label>Password</label>
-                                            <input class="form-control" placeholder="your password" name="password" value="<?php echo $password;?>" type="password" />
+                                            <input class="form-control" placeholder="your password" name="password" value="" type="password" />
                                         </div>
                                         <input class="btn btn-primary" type="submit" value="Sign in" />
                                     </form>
@@ -102,7 +84,7 @@ if(count($_POST)>0) {
                                     ?></strong>
                                 </div>
                                 <div class="col-md-4">
-                                    <h3 class="mb15">New To Traveler?</h3>
+                                    <h3 class="mb15">New To CoolMarket?</h3>
                                     <form>
                                         <div class="form-group form-group-ghost form-group-icon-left"><i class="fa fa-user input-icon input-icon-show"></i>
                                             <label>Full Name</label>
@@ -127,16 +109,6 @@ if(count($_POST)>0) {
                         </li>
                         <li><a href="#">Help</a>
                         </li>
-                        <li><a href="#">Hot Deals</a>
-                        </li>
-                        <li><a href="#">Popular Locations</a>
-                        </li>
-                        <li><a href="#">Cheap Flights</a>
-                        </li>
-                        <li><a href="#">Business</a>
-                        </li>
-                        <li><a href="#">Media</a>
-                        </li>
                         <li><a href="#">Developers</a>
                         </li>
                         <li><a href="#">Advertise</a>
@@ -146,28 +118,7 @@ if(count($_POST)>0) {
             </div>
         </div>
 
-
-
-        <script src="js/jquery.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/slimmenu.js"></script>
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/bootstrap-timepicker.js"></script>
-        <script src="js/nicescroll.js"></script>
-        <script src="js/dropit.js"></script>
-        <script src="js/ionrangeslider.js"></script>
-        <script src="js/icheck.js"></script>
-        <script src="js/fotorama.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="js/typeahead.js"></script>
-        <script src="js/card-payment.js"></script>
-        <script src="js/magnific.js"></script>
-        <script src="js/owl-carousel.js"></script>
-        <script src="js/fitvids.js"></script>
-        <script src="js/tweet.js"></script>
-        <script src="js/countdown.js"></script>
-        <script src="js/gridrotator.js"></script>
-        <script src="js/custom.js"></script>
+        <?php require("./includes/cm_body_resources.php"); ?>
     </div>
 </body>
 

@@ -14,7 +14,7 @@
                                         <a href="user-profile.html">
                                             <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Welcome</a>
                                     </li>
-                                    <li><a href="#">Sign Out</a>
+                                    <li><a href="login.php">Sign Out</a>
                                     </li>
                                 </ul>
                             </div>
