@@ -38,7 +38,36 @@ $productDetail = $_SESSION["productDetail"];
             $review_li_containers.each(function(){
                 let reviewRating = $(this).find(".review_rating_value").text();
                 setReviewStars(reviewRating, $(this).find(".booking-item-rating-stars"));
-            })
+            });
+
+            // render genral rating word
+            $general_rating_text = $("#general_rating_text");
+            switch(Math.floor(productRating))
+            {
+                case 0:
+                    $general_rating_text.text("Unknown");
+                    break;
+                case 1:
+                    $general_rating_text.text("Normal");
+                    break;
+                case 2:
+                    $general_rating_text.text("Good");
+                    break;
+                case 3:
+                    $general_rating_text.text("Popular");
+                    break;
+                case 4:
+                    $general_rating_text.text("Great");
+                    break;
+                case 5:
+                    $general_rating_text.text("Exeptional!");
+                    break;
+                default:
+                    $general_rating_text.text("Unknown");
+            };
+
+            $general_rating_percent = $("#general_rating_percent");
+            $general_rating_percent.text(Math.floor((productRating / 5) * 100) + "%");
         });
 
         // calculate rating score
@@ -53,6 +82,7 @@ $productDetail = $_SESSION["productDetail"];
             $("#ratingScore").val(score);
             submitForm($(this));
         });
+
 
 
     </script>
@@ -111,8 +141,8 @@ $productDetail = $_SESSION["productDetail"];
                     <div class="col-md-4">
                         <div class="ml20">
                             <div class="booking-item-meta">
-                                <h2 id="general_ranking_text" class="lh1em mt40">Exeptional!</h2>
-                                <h3 id="general_ranking_percent">90% <small >of customers recommend</small></h3>
+                                <h2 id="general_rating_text" class="lh1em mt40">Exeptional!</h2>
+                                <h3 ><span id="general_rating_percent">90%</span><small > of customers recommend</small></h3>
                                 <div class="booking-item-rating">
                                     <ul id="product_rating_ul" class="icon-list icon-group booking-item-rating-stars">
                                         <li><i class="fa fa-star"></i>
