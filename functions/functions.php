@@ -78,7 +78,7 @@ function getURLByMarketID($marketID)
   switch ($marketID)
   {
     case "mutian":
-      $productURL = "http://127.0.0.1/CoolCompany/api/myproducts";
+      $productURL = "http://127.0.0.1/CoolCompany/api/myproducts.php";
       break;
     case "nancy":
       $productURL = "http://nx168.xyz/prod_list.php";
@@ -93,7 +93,7 @@ function getURLByMarketID($marketID)
       $productURL = "http://swiftbooks.net/bookstore/myproducts.php";
       break;
     default:
-      $productURL = "http://127.0.0.1/CoolCompany/api/myproducts";
+      $productURL = "http://127.0.0.1/CoolCompany/api/myproducts.php";
   }
   return $productURL;
 }
