@@ -20,6 +20,7 @@ if (!is_string($user) || substr($user, 0, 5 ) != 'Error') {
     }
 
     $_SESSION['valid'] = true;
+    $_SESSION['member_id'] = $user["id"];
     
     if($user["role"] === "ADMIN")
     {

@@ -2,16 +2,17 @@
 class ProductForm extends DbConn
 {
 
-    public function findProductBy($searchBy, $searchValue)
+    public function findByMarketAndName($market_id, $product_name)
     {
         try
         {
             $db = new DbConn;
             $tbl_products = $db->tbl_products;
             // prepare sql and bind parameters
-            $dbstr = "SELECT * FROM " . $tbl_products . " WHERE " . $searchBy . " = " . ":value";
+            $dbstr = "SELECT * FROM " . $tbl_products . " WHERE market_id  = :market_id AND name = :name";
             $stmt = $db->conn->prepare($dbstr);
-            $stmt->bindParam(':value', $searchValue);
+            $stmt->bindParam(':market_id', $market_id);
+            $stmt->bindParam(':name', $product_name);
             
             $stmt->execute();
             $result = $stmt->fetchAll();
@@ -19,12 +20,41 @@ class ProductForm extends DbConn
             $err = '';
         }
         catch (PDOException $e)
-        {	
+        {   
             $err = "Error: " . $e->getMessage();
             $result = null;
         }
 
         return $this->_ret($err, $result);   
+    }
+
+    public function insertProduct($market_id, $product_name, $rating = 0)
+    {
+        try
+        {
+            $db = new DbConn;
+            $tbl_products = $db->tbl_products;
+            // prepare sql and bind parameters
+            $dbstr = "INSERT INTO products (market_id, name, rating) VALUES (:market_id, :name, :rating)";
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':market_id', $market_id);
+            $stmt->bindParam(':name', $product_name);
+            $stmt->bindParam(':rating', $rating);
+
+            
+            $stmt->execute();
+
+            $result = "";
+
+            $err = '';
+        }
+        catch (PDOException $e)
+        {   
+            $err = "Error: " . $e->getMessage();
+            $result = null;
+        }
+
+        return $this->_ret($err, $result);  
     }
 
 	public function updateRating($id) 

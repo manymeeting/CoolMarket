@@ -10,7 +10,7 @@ class ReviewForm extends DbConn
             $db = new DbConn;
 
             // prepare sql 
-            $dbstr = "SELECT * FROM reviews ".
+            $dbstr = "SELECT reviews.rating, reviews.content, reviews.title, members.firstname, members.lastname, members.homeaddr FROM reviews ".
             " LEFT JOIN members ON reviews.member_id = members.id".
             " LEFT JOIN products ON reviews.product_id = products.id".
             " WHERE products.name = :product_name AND products.market_id = :market_id";
@@ -64,23 +64,38 @@ class ReviewForm extends DbConn
     }
 
 
-    public function insertReview($name, $market_id, $member_id, $content, $rating)
+    public function insertReview($name, $market_id, $member_id, $title, $content, $rating)
     {
         try {
 
-            $db = new DbConn;
-			//get product_id
-			$dbstrProductId = "SELECT id FROM products WHERE NAME = '$name' AND MARKET_ID = '$market_id'";			                  
-            $resultProductId = $db->conn->query($dbstrProductId);
-			$row = $resultProductId->fetch(PDO::FETCH_ASSOC);
-			
-			$productId = $row['id'];
-            
-            // insert reviews
-            $dbstr = "INSERT INTO reviews (product_id, member_id, content, rating) VALUES ('$productId','$member_id','$content','$rating')";
-            $result = $db->conn->query($dbstr);
             
 
+            $db = new DbConn;
+            //get product id
+            $dbstr = "SELECT * FROM products ".
+            " WHERE name = :name AND market_id = :market_id";
+            
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':market_id', $market_id);
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+
+            $productID = $result[0]["id"];
+
+            // insert reviews
+            $dbstr = "INSERT INTO reviews (product_id, member_id, title, content, rating) VALUES ".
+            " ( :product_id, :member_id, :title, :content, :rating )";
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':product_id', $productID, PDO::PARAM_STR);
+            $stmt->bindParam(':member_id', $member_id, PDO::PARAM_STR);
+            $stmt->bindParam(':title', $title, PDO::PARAM_STR);
+            $stmt->bindParam(':content', $content, PDO::PARAM_STR);
+            $stmt->bindParam(':rating', strval($rating), PDO::PARAM_STR);
+            
+
+            $stmt->execute();
+            
             $err = '';
 
         } catch (PDOException $e) {

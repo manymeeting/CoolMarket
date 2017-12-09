@@ -136,7 +136,16 @@ $productDetail = $_SESSION["productDetail"];
                     </div>
                 </div>
                 <div class="gap"></div>
-                <h3 class="mb20">Product Reviews</h3>
+                <h3 <?php 
+                        if(!$productDetail["reviews"] || sizeof($productDetail["reviews"])==0)
+                        { 
+                            echo 'class="mb20 hidden"';
+                        }
+                        else
+                        {
+                            echo 'class="mb20"';
+                        }
+                        ?>>Product Reviews</h3>
                 <div class="row row-wrap">
                     <div class="col-md-8">
                         <ul id="reviews_list" class="booking-item-reviews list">
@@ -187,18 +196,29 @@ $productDetail = $_SESSION["productDetail"];
                             ?>
                         </ul>
                         <div class="gap gap-small"></div>
-                        <div class="box bg-gray">
+                        <div <?php 
+                            if(!isset($_SESSION["valid"]))
+                            { 
+                                echo 'class="box bg-gray hidden"';
+                            }
+                            else
+                            {
+                                echo 'class="box bg-gray"';
+                            }
+                        ?>>
                             <h3>Write a Review</h3>
-                            <form>
+                            <form method="post" action="../ctl/addReview.php">
+                                <input type="hidden" name="marketID" <?php echo 'value="' . $productDetail["market_id"] . '"'?>>
+                                <input type="hidden" name="productName" <?php echo 'value="' . $productDetail["product_name"] . '"'?>>
                                 <div class="row">
                                     <div class="col-md-8">
                                         <div class="form-group">
                                             <label>Review Title</label>
-                                            <input class="form-control" type="text" />
+                                            <input class="form-control" name="review_title" type="text" />
                                         </div>
                                         <div class="form-group">
                                             <label>Review Text</label>
-                                            <textarea class="form-control" rows="6"></textarea>
+                                            <textarea class="form-control" name="review_content" rows="6"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
