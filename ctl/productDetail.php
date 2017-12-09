@@ -20,6 +20,9 @@ if(!$productDetail)
 	returnToProductList();
 }
 
+// update view history
+updateProductHistory($productDetail);
+
 
 // get review for this product
 $reviewForm = new ReviewForm;
@@ -58,4 +61,42 @@ function returnToProductList()
 	$products_list_location = "productsList.php";
 	header("Location: " . $products_list_location);	
 }
+
+function updateProductHistory($productDetail)
+{
+  $MAX_LEN = 5;
+
+  // update previously viewed products cookie
+  $preViewedJSON = $_COOKIE["preViewed"];
+
+  if(strlen($preViewedJSON) == 0)
+  {
+    $preViewedJSON = "[]";
+  }
+  $preViewed = json_decode($preViewedJSON, 2);
+  $newPreViewed = array();
+  // add the current id to the head
+  array_push($newPreViewed, $productDetail);
+
+  $len = count($preViewed);
+  for ($i=0; $i < $len ; $i++) { 
+    $curr_name = $preViewed[$i]["product_name"];
+    $curr_market = $newPreViewed[$i]["market_id"];
+
+    if($curr_name != $productDetail["product_name"] || $curr_market != $productDetail["market_id"])
+    {
+      array_push($newPreViewed, $preViewed[$i]);
+      if(count($newPreViewed) == $MAX_LEN)
+      {
+        break;
+      }
+    }
+  }
+  
+  $preViewed = $newPreViewed;
+  setcookie("preViewed", json_encode($preViewed));
+
+}
+
+
 ?>

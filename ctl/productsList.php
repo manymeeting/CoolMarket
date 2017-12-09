@@ -10,7 +10,19 @@ $curler = new CURLer;
 $productURL = "";
 
 $marketID = $_GET["marketID"];
-if(!is_null($marketID))
+
+if($marketID==="history")
+{
+  // get products data from cookie
+  $jsonData = getHistoryProducts();
+  $jsonData = combineRatingToProducts($productForm, $jsonData);
+
+  $jsonData = sortProducts($jsonData);
+  // pass products data to views
+  $_SESSION["productsData"] = $jsonData;
+  $_SESSION["market_id"] = $marketID;
+}
+else if(!is_null($marketID))
 {
   $productURL = getURLByMarketID($marketID);
   $jsonData = getProductsFromURL($curler, $productURL);
@@ -69,6 +81,6 @@ function sortProducts($jsonData)
     }
   }
   return $result;
-
 }
+
 ?>

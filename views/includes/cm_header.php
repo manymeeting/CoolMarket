@@ -45,6 +45,8 @@
                                 </li>
                                 <li><a href="../ctl/productsList.php?marketID=yue">Yue</a>
                                 </li>
+                                <li><a href="../ctl/productsList.php?marketID=history">History</a>
+                                </li>
                             </ul>
                         </li>
                         <li id="nav_news"><a href="news.php">News</a>

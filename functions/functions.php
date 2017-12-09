@@ -62,7 +62,7 @@ function getProductsViewHistory($marketID)
     {
       $preViewedJSON = "[]";
     }
-    $preViewed = json_decode($preViewedJSON);
+    $preViewed = json_decode($preViewedJSON, 2);
 
 
     $preductForm = new ProductForm;
@@ -98,6 +98,19 @@ function getURLByMarketID($marketID)
   return $productURL;
 }
 
+function getHistoryProducts()
+{
+  // update previously viewed products cookie
+  $preViewedJSON = $_COOKIE["preViewed"];
+  
+  if(strlen($preViewedJSON) == 0)
+  {
+    $preViewedJSON = "[]";
+  }
+  $preViewed = json_decode($preViewedJSON, 2);
+
+  return $preViewed;
+}
 
 function array_sort($array, $keys ,$type='asc'){
   $keysvalue = $new_array = array();  
