@@ -18,6 +18,10 @@
                                     if (isset($_SESSION["valid"])) {
                                         echo '<li><a href="../ctl/logout.php">Sign Out</a>';
                                     }
+                                    else
+                                    {
+                                        echo '<li><a href="login.php">Sign In</a>';   
+                                    }
                                     ?>
                                     </li>
                                 </ul>

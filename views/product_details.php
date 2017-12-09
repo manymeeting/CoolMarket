@@ -188,7 +188,7 @@ $productDetail = $_SESSION["productDetail"];
                                     '        <div class="col-md-2">'.
                                     '            <div class="booking-item-review-person">'.
                                     '                <a class="booking-item-review-person-avatar round" href="#">'.
-                                    '                    <img src="img/70x70.png" alt="Image Alternative text" title="Bubbles" />'.
+                                    '                    <img src="img/avatarA_70x70.png" alt="Image Alternative text" title="Bubbles" />'.
                                     '                </a>'.
                                     '                <p class="booking-item-review-person-name"><a href="#">'. $review['firstname'] . ' ' . $review['lastname'] .'</a>'.
                                     '                </p>'.

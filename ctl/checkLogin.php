@@ -13,7 +13,7 @@ $password = $_POST['password'];
 $userForm = new UserForm;
 $user = $userForm->searchByEmail($email)[0];
 
-if (!is_string($user) || substr($user, 0, 5 ) != 'Error') {
+if (!is_null($user)) {
     if($user["password"] != $password)
     {
       loginFail();

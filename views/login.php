@@ -60,8 +60,8 @@ if(count($_POST)>0) {
                                 <div class="col-md-4">
                                     <div class="visible-lg">
                                         <h3 class="mb15">Welcome to CoolMarket</h3>
-                                        <p>Ultrices lacus erat mattis nam sem porta nascetur luctus nunc litora diam ornare maecenas et phasellus molestie lorem habitant ultricies condimentum dignissim interdum erat sit praesent penatibus mattis pharetra penatibus</p>
-                                        <p>Sodales amet consectetur consectetur curae placerat consectetur penatibus fusce sagittis</p>
+                                        <p>CoolMarket is your one-stop online marketplace. And now that we are online, we hope we can serve you even better—giving you more ways to shop, wherever you may be.</p>
+                                        <p>Ongoing catalog of brands you love at amazing prices. New arrivals are added every week, so check back often!Easy to search and shop all your favorite styles</p>
                                     </div>
                                 </div>
                                 <div class="col-md-4">

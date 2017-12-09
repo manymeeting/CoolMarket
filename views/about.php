@@ -67,7 +67,7 @@
             <h2>Key Facts</h2>
             <div class="row">
                 <div class="col-md-10">
-                    <p class="text-bigger mb30">Ongoing catalog of brands you love at amazing prices.New arrivals are added every week, so check back often!Easy to search and shop all your favorite styles</p>
+                    <p class="text-bigger mb30">Ongoing catalog of brands you love at amazing prices. New arrivals are added every week, so check back often!Easy to search and shop all your favorite styles</p>
                 </div>
             </div>
             <div class="row row-wrap" data-gutter="60">
