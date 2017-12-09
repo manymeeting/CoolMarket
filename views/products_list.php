@@ -29,36 +29,9 @@ session_start();
 
         });
 
-        /*
-        // better to do it backend 
-        $(document).on("click", "#sort_btn", function(){
-            let $checked_radio = $("div.i-radio.checked");
-            if($checked_radio.length==0)
-            {
-                return;
-            }
-            else
-            {
-                let sortBy = $checked_radio.children("input[name=viewType]").val();
-                if(sortBy === "price")
-                {
-                    $productList = $(".booking-list");
-                    $childrenList = $productList.children("li").detach();
-                    $childrenList.sort(function(a, b){
-                        let priceA = $(a).find(".booking-item-price").text().substring(1);
-                        let priceB = $(b).find(".booking-item-price").text().substring(1);
-                        return parseInt(priceA) - parseInt(priceB);
-                    });
-                    $childrenList.appendTo(".booking-list");
-                }
-                else if(sortBy === "rating")
-                {
-
-                }
-            }
-        });
-        */
-
+        $(document).on("click","#sort_btn", function(){
+            submitForm($(this));
+        })
     </script>
     <!-- /FACEBOOK WIDGET -->
     <div class="global-wrap">
@@ -72,7 +45,13 @@ session_start();
             <h3 class="booking-title">All Products List</h3>
             <div class="row">
                 <div class="col-md-3">
-                    <form>
+                    <form method="get" action="../ctl/productsList.php">
+                        <?php
+                        if(isset($_SESSION["market_id"]))
+                        {
+                            echo '<input type="hidden name="marketID" '.'value="' . $_SESSION["market_id"] . '">';
+                        }
+                        ?> 
                         <aside class="booking-filters text-white">
                             <h3>View By:</h3>
                             <ul class="list booking-filters-list">
@@ -84,11 +63,11 @@ session_start();
                                     <h5 class="booking-filters-title">Sort By</h5>
                                     <div class="radio sort_radio">
                                         <label>
-                                            <input class="i-radio" name="viewType" type="radio" value="price" />Lowest Price</label>
+                                            <input class="i-radio" name="sortBy" type="radio" value="price" />Lowest Price</label>
                                     </div>
                                     <div class="radio sort_radio">
                                         <label>
-                                            <input class="i-radio" name="viewType" type="radio" value="rating"/>Highest Ratings</label>
+                                            <input class="i-radio" name="sortBy" type="radio" value="rating"/>Highest Ratings</label>
                                     </div>
                                 </li>
                             </ul>

@@ -98,6 +98,25 @@ function getURLByMarketID($marketID)
   return $productURL;
 }
 
+
+function array_sort($array, $keys ,$type='asc'){
+  $keysvalue = $new_array = array();  
+  foreach ($array as $k=>$v){  
+    $keysvalue[$k] = $v[$keys];  
+  }  
+  if($type == 'asc'){  
+    asort($keysvalue);  
+  }
+  else{  
+    arsort($keysvalue);  
+  }  
+  reset($keysvalue);  
+  foreach ($keysvalue as $k=>$v){  
+    $new_array[$k] = $array[$k];  
+  }
+
+  return $new_array;  
+}  
 //echo '<pre>'; print_r($productDetail); echo '</pre>'; exit();
 
 ?>

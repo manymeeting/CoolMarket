@@ -17,8 +17,11 @@ if(!is_null($marketID))
 
   $jsonData = combineRatingToProducts($productForm, $jsonData);
 
+  $jsonData = sortProducts($jsonData);
+  
   // pass products data to views
   $_SESSION["productsData"] = $jsonData;
+  $_SESSION["market_id"] = $jsonData;
 
 }
 else
@@ -39,12 +42,33 @@ else
     
   $jsonData = combineRatingToProducts($productForm, $jsonData);
 
+  $jsonData = sortProducts($jsonData);
+
   // pass products data to views
   $_SESSION["productsData"] = $jsonData;
+  unset($_SESSION["market_id"]);
 }
 
 $products_list_location = "../views/products_list.php";
 header("Location: " . $products_list_location);
 
 
+function sortProducts($jsonData)
+{
+  $result = $jsonData;
+  if(isset($_GET["sortBy"]))
+  {
+    $sortBy = $_GET["sortBy"];
+    if($sortBy === "price")
+    {
+      $result = array_sort($jsonData, "product_price");
+    }
+    else if($sortBy === "rating")
+    {
+      $result = array_sort($jsonData, "rating", "desc");
+    }
+  }
+  return $result;
+
+}
 ?>
