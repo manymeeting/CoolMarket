@@ -26,7 +26,39 @@ session_start();
 
         $(document).ready(function(){
             $("#nav_prod").addClass("active");
+
         });
+
+        /*
+        // better to do it backend 
+        $(document).on("click", "#sort_btn", function(){
+            let $checked_radio = $("div.i-radio.checked");
+            if($checked_radio.length==0)
+            {
+                return;
+            }
+            else
+            {
+                let sortBy = $checked_radio.children("input[name=viewType]").val();
+                if(sortBy === "price")
+                {
+                    $productList = $(".booking-list");
+                    $childrenList = $productList.children("li").detach();
+                    $childrenList.sort(function(a, b){
+                        let priceA = $(a).find(".booking-item-price").text().substring(1);
+                        let priceB = $(b).find(".booking-item-price").text().substring(1);
+                        return parseInt(priceA) - parseInt(priceB);
+                    });
+                    $childrenList.appendTo(".booking-list");
+                }
+                else if(sortBy === "rating")
+                {
+
+                }
+            }
+        });
+        */
+
     </script>
     <!-- /FACEBOOK WIDGET -->
     <div class="global-wrap">
@@ -50,16 +82,20 @@ session_start();
                                 </li>
                                 <li>
                                     <h5 class="booking-filters-title">Sort By</h5>
-                                    <div class="radio">
+                                    <div class="radio sort_radio">
                                         <label>
-                                            <input class="i-check" name="viewType" type="radio" />Lowest Price</label>
+                                            <input class="i-radio" name="viewType" type="radio" value="price" />Lowest Price</label>
                                     </div>
-                                    <div class="radio">
+                                    <div class="radio sort_radio">
                                         <label>
-                                            <input class="i-check" name="viewType" type="radio" />Highest Ratings</label>
+                                            <input class="i-radio" name="viewType" type="radio" value="rating"/>Highest Ratings</label>
                                     </div>
                                 </li>
                             </ul>
+                            <div class="container">
+                                <p id="sort_btn" class="btn btn-primary btn-ghost" style="margin: ">Refresh</a>
+                            </div>
+                            
                         </aside>
                         
                     </form>
@@ -68,10 +104,9 @@ session_start();
                     <ul class="booking-list">
                         <?php
                         $prodcutsData = $_SESSION["productsData"];
-
                         foreach ($prodcutsData as $product) {
                             $html =
-                            '<li>'. 
+                            '<li class="prodcuts_container">'. 
                                 '<a class="booking-item" href="../ctl/productDetail.php'.'?marketID='.$product['market_id'].'&productName='.$product['product_name'].'">'.
                                     '<div class="row">'.
                                         '<div class="col-md-3">'.
