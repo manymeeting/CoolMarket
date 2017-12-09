@@ -21,7 +21,7 @@ if(!is_null($marketID))
   
   // pass products data to views
   $_SESSION["productsData"] = $jsonData;
-  $_SESSION["market_id"] = $jsonData;
+  $_SESSION["market_id"] = $marketID;
 
 }
 else

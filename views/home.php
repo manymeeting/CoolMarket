@@ -51,7 +51,7 @@
                                         </blockquote>
                                     </div>
                                     <div class="testimonial-author">
-                                        <img src="img/50x50.png" alt="Image Alternative text" title="Gamer Chick" />
+                                        <img src="img/avatarA_40x40.png" alt="Image Alternative text" title="Gamer Chick" />
                                         <p class="testimonial-author-name">Mutian Wang, Nancy, Ruifeng, Vencci, Yue</p><cite>from <a class="text-udl" href="#">CMPE272</a> San Jose State University</cite>
                                     </div>
                                 </div>
@@ -176,7 +176,7 @@
                                 <header class="thumb-header"><i class="fa fa-send box-icon-gray box-icon-center round box-icon-border box-icon-big animate-icon-top-to-bottom"></i>
                                 </header>
                                 <div class="thumb-caption">
-                                    <h5 class="thumb-title"><a class="text-darken" href="#">Best Destinations</a></h5>
+                                    <h5 class="thumb-title"><a class="text-darken" href="#">Best Delivery</a></h5>
                                     <p class="thumb-desc">Sollicitudin enim ad mauris lacus lectus a iaculis lorem pellentesque</p>
                                 </div>
                             </div>
@@ -188,11 +188,11 @@
         </div>
         <div class="bg-holder">
             <div class="bg-mask"></div>
-            <div class="bg-blur" style="background-image:url(img/1024x672.png);"></div>
+            <div class="bg-blur" style="background-image:url(img/backgrounds/cameras.jpg);"></div>
             <div class="bg-content">
                 <div class="container">
                     <div class="gap gap-big text-center text-white">
-                        <h2 class="text-uc mb20">Last Minute Deal</h2>
+                        <h2 class="text-uc mb20">Last Minute Price</h2>
                         <ul class="icon-list list-inline-block mb0 last-minute-rating">
                             <li><i class="fa fa-star"></i>
                             </li>
@@ -205,69 +205,9 @@
                             <li><i class="fa fa-star"></i>
                             </li>
                         </ul>
-                        <h5 class="last-minute-title">The Peninsula - New York</h5>
-                        <p class="last-minute-date">Fri 14 Mar - Sun 16 Mar</p>
-                        <p class="mb20"><b>$120</b> / person</p><a class="btn btn-lg btn-white btn-ghost" href="#">Book Now <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="gap"></div>
-            <h2 class="text-center">Top Destinations</h2>
-            <div class="gap">
-                <div class="row row-wrap">
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="Upper Lake in New York Central Park" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title">USA</h4>
-                                <p class="thumb-desc">Tellus cum ante sed mus vulputate scelerisque eu</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="lack of blue depresses me" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title">Greece</h4>
-                                <p class="thumb-desc">Per fermentum etiam nisi platea dui posuere nibh</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/800x600.png" alt="Image Alternative text" title="people on the beach" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title">Australia</h4>
-                                <p class="thumb-desc">Netus eros sed nisl senectus natoque sapien maecenas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="thumb">
-                            <header class="thumb-header">
-                                <a class="hover-img curved" href="#">
-                                    <img src="img/400x300.png" alt="Image Alternative text" title="the journey home" /><i class="fa fa-plus box-icon-white box-icon-border hover-icon-top-right round"></i>
-                                </a>
-                            </header>
-                            <div class="thumb-caption">
-                                <h4 class="thumb-title">Africa</h4>
-                                <p class="thumb-desc">Himenaeos proin in natoque porta sociis semper posuere</p>
-                            </div>
-                        </div>
+                        <h5 class="last-minute-title">Nikon D850</h5>
+                        <p class="last-minute-date">Dec 14 2017 - Dec 16 2017</p>
+                        <p class="mb20"><b>$5080</b></p><a class="btn btn-lg btn-white btn-ghost" href="#">Order Now <i class="fa fa-angle-right"></i></a>
                     </div>
                 </div>
             </div>

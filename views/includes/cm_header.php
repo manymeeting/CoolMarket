@@ -3,7 +3,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <a class="logo" href="index.html">
+                            <a class="logo" href="home.php">
                                 <img src="img/logo-invert.png" alt="Image Alternative text" title="Image Title" />
                             </a>
                         </div>
@@ -11,10 +11,14 @@
                             <div class="top-user-area clearfix">
                                 <ul class="top-user-area-list list list-horizontal list-border">
                                     <li class="top-user-area-avatar">
-                                        <a href="user-profile.html">
-                                            <img class="origin round" src="img/40x40.png" alt="Image Alternative text" title="AMaze" />Welcome</a>
+                                        <a href="#">
+                                            <img class="origin round" src="img/memberA.png" alt="Image Alternative text" title="AMaze" />Welcome</a>
                                     </li>
-                                    <li><a href="../ctl/logout.php">Sign Out</a>
+                                    <?php 
+                                    if (isset($_SESSION["valid"])) {
+                                        echo '<li><a href="../ctl/logout.php">Sign Out</a>';
+                                    }
+                                    ?>
                                     </li>
                                 </ul>
                             </div>
@@ -47,8 +51,11 @@
                         </li>
                         <li id="nav_contact"><a href="contact_us.php">Contacts</a>
                         </li>
-                        <li id="nav_users"><a href="users_list.php">Users</a>
-                        </li>
+                        <?php 
+                        if (isset($_SESSION["valid"])) {
+                            echo '<li id="nav_users"><a href="users_list.php">Users</a></li>';
+                        }
+                        ?>
                     </ul>
                 </div>
             </div>

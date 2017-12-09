@@ -224,8 +224,8 @@ $('.nav-drop').dropit();
 
 
 $("#price-slider").ionRangeSlider({
-    min: 130,
-    max: 575,
+    min: 0,
+    max: 9999,
     type: 'double',
     prefix: "$",
     // maxPostfix: "+",

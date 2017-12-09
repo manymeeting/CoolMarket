@@ -35,11 +35,11 @@
             <div class="article post">
                 <header class="post-header">
                     <a class="hover-img" href="#">
-                        <img src="img/1200x500.png" alt="Image Alternative text" title="196_365" /><i class="fa fa-link box-icon-# hover-icon round"></i>
+                        <img src="img/backgrounds/beach.jpg" alt="Image Alternative text" title="196_365" /><i class="fa fa-link box-icon-# hover-icon round"></i>
                     </a>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Image Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Image Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">15 October, 2014</a>
                         </li>
@@ -60,7 +60,7 @@
                     <blockquote>A ante ipsum curabitur diam nascetur gravida penatibus augue arcu hac feugiat sapien quis fames congue ultricies himenaeos metus maecenas</blockquote>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Quoute Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Quoute Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">08 October, 2014</a>
                         </li>
@@ -79,13 +79,13 @@
             <div class="article post">
                 <header class="post-header">
                     <div class="fotorama" data-allowfullscreen="true">
-                        <img src="img/1200x500.png" alt="Image Alternative text" title="196_365" />
-                        <img src="img/1200x500.png" alt="Image Alternative text" title="196_365" />
-                        <img src="img/1200x500.png" alt="Image Alternative text" title="196_365" />
+                        <img src="img/backgrounds/keyboard" alt="Image Alternative text" title="196_365" />
+                        <img src="img/backgrounds/bridge" alt="Image Alternative text" title="196_365" />
+                        <img src="img/backgrounds/taxi" alt="Image Alternative text" title="196_365" />
                     </div>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Slider Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Slider Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">27 September, 2014</a>
                         </li>
@@ -105,7 +105,7 @@
                 <header class="post-header"><a class="post-link" href="#">Google.com</a>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Link Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Link Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">05 September, 2014</a>
                         </li>
@@ -126,7 +126,7 @@
                     <iframe src="//www.youtube.com/embed/6iHwPfirtUg" frameborder="0" allowfullscreen></iframe>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Youtube Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Youtube Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">20 July, 2014</a>
                         </li>
@@ -147,7 +147,7 @@
                     <iframe src="http://player.vimeo.com/video/103721959" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Vimeo Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Vimeo Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">19 April, 2014</a>
                         </li>
@@ -168,7 +168,7 @@
                     <iframe width="100%" height="150" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/150793348&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=false"></iframe>
                 </header>
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Audio Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Audio Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">21 October, 2013</a>
                         </li>
@@ -186,7 +186,7 @@
             <!-- START BLOG POST -->
             <div class="article post">
                 <div class="post-inner">
-                    <h4 class="post-title"><a class="text-darken" href="#">Default Post Type</a></h4>
+                    <h4 class="post-title"><a class="text-darken" href="#">Default Sales Plan</a></h4>
                     <ul class="post-meta">
                         <li><i class="fa fa-calendar"></i><a href="#">22 October, 2012</a>
                         </li>

@@ -49,7 +49,7 @@ session_start();
                         <?php
                         if(isset($_SESSION["market_id"]))
                         {
-                            echo '<input type="hidden name="marketID" '.'value="' . $_SESSION["market_id"] . '">';
+                            echo '<input type="hidden" name="marketID" '.'value="' . $_SESSION["market_id"] . '">';
                         }
                         ?> 
                         <aside class="booking-filters text-white">
