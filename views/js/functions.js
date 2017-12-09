@@ -12,3 +12,19 @@ function submitForm($element, formId)
     $form.submit();
   }
 }
+
+
+function setReviewStars(rating, $stars_ul)
+{
+	rating = Math.floor(rating);
+	$stars_ul.children("li").each(function(){
+		$(this).find("i").addClass("fa-star-o");
+	});
+
+	for (let i = 0; i < rating; i++) {
+		$stars_ul.children("li").eq(i).find("i").removeClass("fa-star-o");
+		$stars_ul.children("li").eq(i).find("i").addClass("fa-star");
+	}
+}
+        
+

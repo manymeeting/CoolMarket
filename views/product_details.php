@@ -1,3 +1,9 @@
+<?php
+session_start();
+$productDetail = $_SESSION["productDetail"];
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -22,6 +28,17 @@
 
         $(document).ready(function(){
             $("#nav_prod").addClass("active");
+
+            // render rating stars for product
+            let productRating = parseInt($("#product_rating").text());
+            setReviewStars(productRating, $("#product_rating_ul"));
+
+            // render rating stars for comments
+            let $review_li_containers = $("#reviews_list").children(".review_li_container");
+            $review_li_containers.each(function(){
+                let reviewRating = $(this).find(".review_rating_value").text();
+                setReviewStars(reviewRating, $(this).find(".booking-item-rating-stars"));
+            })
         });
 
         // calculate rating score
@@ -35,7 +52,9 @@
             let score = (revA+revB+revC+revD+revE) / 5;
             $("#ratingScore").val(score);
             submitForm($(this));
-        })
+        });
+
+
     </script>
     <!-- /FACEBOOK WIDGET -->
     <div class="global-wrap">
@@ -45,24 +64,25 @@
             <ul class="breadcrumb">
                 <li><a href="home.php">Home</a>
                 </li>
-                <li class="active">Markets</li>
+                <li><a href="products_list.php">Markets</a></li>
+                <li class="active">Product Detail</li>
             </ul>
             <div class="booking-item-details">
                 <header class="booking-item-header">
                     <div class="row">
                         <div class="col-md-9">
-                            <h2 class="lh1em">InterContinental New York Barclay</h2>
-                            <p class="lh1em text-small"><i class="fa fa-map-marker"></i> 6782 Sarasea Circle, Siesta Key, FL 34242</p>
+                            <h2 class="lh1em"><?php echo $productDetail["product_name"]?></h2>
+                            <p class="lh1em text-small"><i class="fa fa-gift"></i> From Market: <?php echo $productDetail["market_id"]?></p>
                             <ul class="list list-inline text-small">
-                                <li><a href="#"><i class="fa fa-envelope"></i> Hotel E-mail</a>
+                                <li><a href="#"><i class="fa fa-envelope"></i> Seller E-mail</a>
                                 </li>
-                                <li><a href="#"><i class="fa fa-home"></i> Hotel Website</a>
+                                <li><a href="#"><i class="fa fa-home"></i> Seller Website</a>
                                 </li>
-                                <li><i class="fa fa-phone"></i> +1 (621) 511-9145</li>
+                                <li><i class="fa fa-phone"></i> +1 (408) 123-1234</li>
                             </ul>
                         </div>
                         <div class="col-md-3">
-                            <p class="booking-item-header-price"><small>price from</small>  <span class="text-lg">$350</span>/night</p>
+                            <p class="booking-item-header-price"><span class="text-lg">$<?php echo $productDetail["product_price"]?></span>/in USD</p>
                         </div>
                     </div>
                 </header>
@@ -78,8 +98,8 @@
                                     <!-- START LIGHTBOX GALLERY -->
                                     <div class="row row-no-gutter" id="popup-gallery">
                                         <div class="col-md-12">
-                                            <a class="hover-img popup-gallery-image" href="img/800x600.png" data-effect="mfp-zoom-out">
-                                                <img src="img/800x600.png" alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO lobby" /><i class="fa fa-plus round box-icon-small hover-icon i round"></i>
+                                            <a class="hover-img popup-gallery-image" <?php echo 'href="'.$productDetail["image_url"].'"'?> data-effect="mfp-zoom-out">
+                                                <img <?php echo 'src="'.$productDetail["image_url"].'"'?> alt="Image Alternative text" title="LProduct PORTO BAY SAO PAULO lobby" /><i class="fa fa-plus round box-icon-small hover-icon i round"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -91,10 +111,10 @@
                     <div class="col-md-4">
                         <div class="ml20">
                             <div class="booking-item-meta">
-                                <h2 class="lh1em mt40">Exeptional!</h2>
-                                <h3>90% <small >of customers recommend</small></h3>
+                                <h2 id="general_ranking_text" class="lh1em mt40">Exeptional!</h2>
+                                <h3 id="general_ranking_percent">90% <small >of customers recommend</small></h3>
                                 <div class="booking-item-rating">
-                                    <ul class="icon-list icon-group booking-item-rating-stars">
+                                    <ul id="product_rating_ul" class="icon-list icon-group booking-item-rating-stars">
                                         <li><i class="fa fa-star"></i>
                                         </li>
                                         <li><i class="fa fa-star"></i>
@@ -105,57 +125,66 @@
                                         </li>
                                         <li><i class="fa fa-star"></i>
                                         </li>
-                                    </ul><span class="booking-item-rating-number"><b >4.7</b> of 5 <small class="text-smaller">guest rating</small></span>
-                                    <p><a class="text-default" href="#">based on 99 reviews</a>
+                                    </ul><span class="booking-item-rating-number"><b id="product_rating"><?php echo $productDetail["rating"]?></b> of 5 <small class="text-smaller">rating</small></span>
+                                    <p><a class="text-default" href="#">based on verified reviews</a>
                                     </p>
                                 </div>
                             </div>
                             <h4>About the Product</h4>
-                            <p>Egestas elit morbi magna montes felis venenatis purus rutrum parturient venenatis massa cursus congue mi himenaeos integer aenean consectetur lacinia</p>
+                            <p><?php echo $productDetail["product_description"]?></p>
                         </div>
                     </div>
                 </div>
                 <div class="gap"></div>
-                <h3 class="mb20">Hotel Reviews</h3>
+                <h3 class="mb20">Product Reviews</h3>
                 <div class="row row-wrap">
                     <div class="col-md-8">
-                        <ul class="booking-item-reviews list">
-                            <li>
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <div class="booking-item-review-person">
-                                            <a class="booking-item-review-person-avatar round" href="#">
-                                                <img src="img/70x70.png" alt="Image Alternative text" title="Bubbles" />
-                                            </a>
-                                            <p class="booking-item-review-person-name"><a href="#">Joe Smith</a>
-                                            </p>
-                                            <p class="booking-item-review-person-loc">Palm Beach, FL</p><small><a href="#">117 Reviews</a></small>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10">
-                                        <div class="booking-item-review-content">
-                                            <h5>"Aptent tempus maecenas"</h5>
-                                            <ul class="icon-group booking-item-rating-stars">
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                            </ul>
-                                            <p>Accumsan vel quam inceptos mus maecenas elementum hendrerit porttitor id placerat suspendisse molestie sollicitudin ut suspendisse pellentesque nostra fringilla senectus cursus
-                                            </p>
-                                            <p class="booking-item-review-rate">Was this review helpful?
-                                                <a class="fa fa-thumbs-o-up box-icon-inline round" href="#"></a><b class="text-color"> 15</b>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul id="reviews_list" class="booking-item-reviews list">
+                            <?php 
+                                $reviews = $productDetail["reviews"];
+                                foreach ($reviews as $review) {
+                                    $html = 
+                                    '<li class="review_li_container">'.
+                                    '    <div class="row">'.
+                                    '        <div class="col-md-2">'.
+                                    '            <div class="booking-item-review-person">'.
+                                    '                <a class="booking-item-review-person-avatar round" href="#">'.
+                                    '                    <img src="img/70x70.png" alt="Image Alternative text" title="Bubbles" />'.
+                                    '                </a>'.
+                                    '                <p class="booking-item-review-person-name"><a href="#">'. $review['firstname'] . ' ' . $review['lastname'] .'</a>'.
+                                    '                </p>'.
+                                    '                <p class="booking-item-review-person-loc">'. $review['homeaddr'] .'</p></small>'.
+                                    '            </div>'.
+                                    '        </div>'.
+                                    '        <div class="col-md-10">'.
+                                    '            <div class="booking-item-review-content">'.
+                                    '                <h5>'. $review['title'] .'</h5>'.
+                                    '                <ul class="icon-group booking-item-rating-stars">'.
+                                    '                    <li><i class="fa fa-star"></i>'.
+                                    '                    </li>'.
+                                    '                    <li><i class="fa fa-star"></i>'.
+                                    '                    </li>'.
+                                    '                    <li><i class="fa fa-star"></i>'.
+                                    '                    </li>'.
+                                    '                    <li><i class="fa fa-star"></i>'.
+                                    '                    </li>'.
+                                    '                    <li><i class="fa fa-star"></i>'.
+                                    '                    </li>'.
+                                    '                </ul>'.
+                                    '                <p>'. $review['content'] .'</p>'.
+                                    '                <p class="booking-item-review-rate">Was this review helpful?'.
+                                    '                    <a class="fa fa-thumbs-o-up box-icon-inline round" href="#"></a>'.
+                                    '                </p>'.
+                                    '                <p class="hidden review_rating_value">'. $review['rating'] .'</p>'.                                    
+                                    '            </div>'.
+                                    '        </div>'.
+                                    '    </div>'.
+                                    '</li>';
+
+                                    print $html . "\n";
+                                }
+
+                            ?>
                         </ul>
                         <div class="gap gap-small"></div>
                         <div class="box bg-gray">

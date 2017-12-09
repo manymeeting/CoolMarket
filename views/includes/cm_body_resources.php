@@ -17,4 +17,3 @@
         <script src="js/countdown.js"></script>
         <script src="js/gridrotator.js"></script>
         <script src="js/custom.js"></script>
-        <script src="js/functions.js"></script>

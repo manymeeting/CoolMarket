@@ -15,3 +15,4 @@
     <link rel="stylesheet" href="css/mystyles.css">
     <script src="js/modernizr.js"></script>
     <script src="js/jquery.js"></script>
+    <script src="js/functions.js"></script>

@@ -2,6 +2,38 @@
 class ReviewForm extends DbConn
 {
 
+
+    public function getReviewsAndMembers($product_name, $market_id)
+    {
+        try
+        {
+            $db = new DbConn;
+
+            // prepare sql 
+            $dbstr = "SELECT * FROM reviews ".
+            " LEFT JOIN members ON reviews.member_id = members.id".
+            " LEFT JOIN products ON reviews.product_id = products.id".
+            " WHERE products.name = :product_name AND products.market_id = :market_id";
+            
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':product_name', $product_name);
+            $stmt->bindParam(':market_id', $market_id);
+            
+            $stmt->execute();
+            $result = $stmt->fetchAll();
+
+            $err = '';
+        }
+        catch (PDOException $e)
+        {
+            $err = "Error: " . $e->getMessage();
+            $result = null;
+        }
+
+        return $this->_ret($err, $result);   
+    }
+
+
     public function searchReview($name, $market_id)
     {
         try

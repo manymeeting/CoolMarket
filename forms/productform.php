@@ -62,8 +62,12 @@ class ProductForm extends DbConn
             $db = new DbConn;
             // prepare sql and bind parameters
             $dbstr = "SELECT * FROM products" ;
-            $result = $db->conn->query($dbstr);
 
+            $stmt = $db->conn->prepare($dbstr);
+            $stmt->bindParam(':value', $searchValue);
+            
+            $stmt->execute();
+            $result = $stmt->fetchAll();
             $err = '';
         }
         catch (PDOException $e)
@@ -74,6 +78,19 @@ class ProductForm extends DbConn
 
         return $this->_ret($err, $result);
         
+    }
+
+    public function filterProducts($marketID, $prodctName, $allProducts)
+    {
+      $result = array();
+      foreach ($allProducts as $product) {
+        if($product["name"] === $prodctName && $product["market_id"] === $marketID)
+        {
+          $result = $product;
+          return $result;
+        }
+      }
+      return false;
     }
 
 

@@ -49,10 +49,10 @@ session_start();
                                     <input type="text" id="price-slider">
                                 </li>
                                 <li>
-                                    <h5 class="booking-filters-title">Advanced</h5>
+                                    <h5 class="booking-filters-title">Sort By</h5>
                                     <div class="radio">
                                         <label>
-                                            <input class="i-check" name="viewType" type="radio" />Recently Viewed</label>
+                                            <input class="i-check" name="viewType" type="radio" />Lowest Price</label>
                                     </div>
                                     <div class="radio">
                                         <label>
@@ -60,7 +60,6 @@ session_start();
                                     </div>
                                 </li>
                             </ul>
-                            <input type="submit" value="Refresh" class="btn btn-ghost btn-primary" style="margin-left: 1.8rem">
                         </aside>
                         
                     </form>
@@ -73,7 +72,7 @@ session_start();
                         foreach ($prodcutsData as $product) {
                             $html =
                             '<li>'. 
-                                '<a class="booking-item" href="product_details.php">'.
+                                '<a class="booking-item" href="../ctl/productDetail.php'.'?marketID='.$product['market_id'].'&productName='.$product['product_name'].'">'.
                                     '<div class="row">'.
                                         '<div class="col-md-3">'.
                                         '   <div class="booking-item-img-wrap">'.
@@ -101,32 +100,6 @@ session_start();
                         }
                         
                         ?>
-                        <li>
-                            <a class="booking-item" href="product_details.php">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="booking-item-img-wrap">
-                                            <img src="img/800x600.png" alt="Image Alternative text" title="LHOTEL PORTO BAY SAO PAULO suite lhotel living room" />
-                                            <div class="booking-item-img-num"><i class="fa fa-picture-o"></i>1</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="booking-item-rating">
-                                            <span class="booking-item-rating-number"><b >4.4</b> of 5</span>
-                                        </div>
-                                        <h5 class="booking-item-title">Fly Me to the Moon</h5>
-                                        <p class="booking-item-address"><i class="fa fa-gift"></i> Market: mutian</p><small class="product-item-status">Status : Available</small>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <span class="booking-item-price-from">from</span>
-                                        <span class="booking-item-price">$207</span>
-                                        <span>in USD</span>
-                                        <span class="btn btn-primary">Detail</span>
-                                    </div>
-                                </div>
-                            </a>
-                        </li>
-
                     </ul>
 
                 </div>
