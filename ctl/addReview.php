@@ -27,6 +27,8 @@ else
 	$reviewForm->insertReview($productName, $marketID, $_SESSION['member_id'], $reviewTitle, $reviewContent, $rating);
 }
 
+// update rating for this product
+$productForm->updateRating($marketID, $productName);
 
 // reload product detail page
 $product_details_location = "productDetail.php?marketID=".$marketID."&productName=".$productName;

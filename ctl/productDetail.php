@@ -30,8 +30,6 @@ if(is_null($reviewsData))
 }
 $productDetail["reviews"] = $reviewsData;
 
-// echo '<pre>'; print_r($productDetail); echo '</pre>'; exit();
-
 // pass products data to views
 $_SESSION["productDetail"] = $productDetail;
 
