@@ -2,7 +2,7 @@
 //Class Autoloader
 spl_autoload_register(function ($className) {
     $className = strtolower($className);
-    $functions = dirname(__FILE__).'/' . "../functions/{$className}.php";
+    $functions = dirname(__FILE__).'/' . "{$className}.php";
     $forms = dirname(__FILE__).'/' . "../forms/{$className}.php";
     $dbconn = dirname(__FILE__).'/' . "../dbconn/{$className}.php";
     if (file_exists($functions)) {
