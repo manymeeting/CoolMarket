@@ -1,2 +1,8 @@
 /*YOUR CUSTOM STYLES*/
-
+.booking-item-price
+{
+	font-size: 3rem;
+	text-overflow: ellipsis;
+	max-width: 150px;
+	overflow: auto;
+}

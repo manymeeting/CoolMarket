@@ -2,16 +2,15 @@
 class ProductForm extends DbConn
 {
 
-    public function searchProduct($searchBy, $searchValue)
+    public function findProductBy($searchBy, $searchValue)
     {
         try
         {
             $db = new DbConn;
             $tbl_products = $db->tbl_products;
             // prepare sql and bind parameters
-            $dbstr = "SELECT * FROM " . $tbl_products . " WHERE " . $searchBy . " LIKE " . ":value";
+            $dbstr = "SELECT * FROM " . $tbl_products . " WHERE " . $searchBy . " = " . ":value";
             $stmt = $db->conn->prepare($dbstr);
-            $searchValue = '%' . $searchValue . '%';
             $stmt->bindParam(':value', $searchValue);
             
             $stmt->execute();

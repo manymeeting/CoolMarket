@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -64,6 +67,40 @@
                 </div>
                 <div class="col-md-9">
                     <ul class="booking-list">
+                        <?php
+                        $prodcutsData = $_SESSION["productsData"];
+
+                        foreach ($prodcutsData as $product) {
+                            $html =
+                            '<li>'. 
+                                '<a class="booking-item" href="product_details.php">'.
+                                    '<div class="row">'.
+                                        '<div class="col-md-3">'.
+                                        '   <div class="booking-item-img-wrap">'.
+                                                '<img src="' . $product['image_url'] .'" alt="Image Alternative text" title="" />'.
+                                                '<div class="booking-item-img-num"><i class="fa fa-picture-o"></i>1</div>'.
+                                            '</div>'.
+                                        '</div>'.
+                                        '<div class="col-md-6">'.
+                                            '<div class="booking-item-rating">'.
+                                                '<span class="booking-item-rating-number"><b >'. $product['rating'] .'</b> of 5</span>'.
+                                            '</div>'.
+                                            '<h5 class="booking-item-title">'.$product['product_name'].'</h5>'.
+                                            '<p class="booking-item-address"><i class="fa fa-gift"></i> Market: '.$product['market_id'].'</p><small class="product-item-status">Status : Available</small>'.
+                                        '</div>'.
+                                        '<div class="col-md-3">'.
+                                            '<div class="booking-item-price-from">from</div>'.
+                                            '<div class="booking-item-price">$'.$product['product_price'].'</div>'.
+                                            '<div>in USD</div>'.
+                                            '<div class="btn btn-primary">Detail</div>'.
+                                        '</div>'.
+                                    '</div>'.
+                                '</a>'.
+                            '<li>';
+                            print $html. "\n";
+                        }
+                        
+                        ?>
                         <li>
                             <a class="booking-item" href="product_details.php">
                                 <div class="row">
@@ -75,21 +112,10 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="booking-item-rating">
-                                            <ul class="icon-group booking-item-rating-stars">
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star"></i>
-                                                </li>
-                                                <li><i class="fa fa-star-half-empty"></i>
-                                                </li>
-                                            </ul><span class="booking-item-rating-number"><b >4.4</b> of 5</span>
+                                            <span class="booking-item-rating-number"><b >4.4</b> of 5</span>
                                         </div>
                                         <h5 class="booking-item-title">Fly Me to the Moon</h5>
-                                        <p class="booking-item-address"><i class="fa fa-gift"></i> Mutian's Market</p><small class="product-item-status">Status : Available</small>
+                                        <p class="booking-item-address"><i class="fa fa-gift"></i> Market: mutian</p><small class="product-item-status">Status : Available</small>
                                     </div>
                                     <div class="col-md-3">
                                         <span class="booking-item-price-from">from</span>
