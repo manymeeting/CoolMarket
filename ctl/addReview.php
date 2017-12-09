@@ -27,12 +27,27 @@ else
 	$reviewForm->insertReview($productName, $marketID, $_SESSION['member_id'], $reviewTitle, $reviewContent, $rating);
 }
 
-// update rating for this product
-$productForm->updateRating($marketID, $productName);
+// update rating in DB
+$newAvgRating = $productForm->updateRating($marketID, $productName);
+
+// update rating in session data
+$productDetail = updateProductRating($marketID, $productName, $newAvgRating);
+
 
 // reload product detail page
 $product_details_location = "productDetail.php?marketID=".$marketID."&productName=".$productName;
 header("Location: " . $product_details_location);
 
+
+
+function updateProductRating($marketID, $productName, $rating)
+{
+  foreach ($_SESSION["productsData"] as &$product) {
+    if($product["product_name"] === $productName && $product["market_id"] === $marketID)
+    {
+      $product["rating"] = $rating;
+    }
+  }
+}
 
 ?>

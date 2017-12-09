@@ -87,7 +87,7 @@ class ProductForm extends DbConn
             $stmt->bindParam(':product_id', $product_id);
             $stmt->execute();
 
-            $result = "";
+            $result = $avg;
             $err = '';
         }
         catch (PDOException $e)
